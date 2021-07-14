@@ -4,12 +4,10 @@ public class Exercise2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		double num = 1234.5678;
-//		int integer = (int)num;
-		long l = (long) num;
-		System.out.println(l);
-//		double db = num - (int)num;
-//		System.out.println(db);
+		double doubleNumber = 1234.5678;
+		short shortNumber = (short)doubleNumber;
+		System.out.println(shortNumber);
+		long longNumber = (long) (doubleNumber%1.0 * 10000);		
+		System.out.println(longNumber);
 	}
-
 }
