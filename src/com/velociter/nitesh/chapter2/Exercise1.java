@@ -1,10 +1,22 @@
 package com.velociter.nitesh.chapter2;
 
 public class Exercise1 {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	public static void main(String args[]) {
+	      byte byteNumber = 1;
+	      System.out.println(2);
+	      byteNumber = (byte) ((byteNumber+1)*(byteNumber+1));
+	      System.out.println(byteNumber);
+	      byteNumber = (byte) (byteNumber*2);
+	      System.out.println(byteNumber);
+	      byteNumber = (byte) (byteNumber*2);
+	      System.out.println(byteNumber);
+	      byteNumber = (byte) (byteNumber*2);
+	      System.out.println(byteNumber);
+	      byteNumber = (byte) (byteNumber*2);
+	      System.out.println(byteNumber);
+	      byteNumber = (byte) (byteNumber*2);
+	      System.out.println(byteNumber);
+	      byteNumber = (byte) (byteNumber*2);
+	      System.out.println(byteNumber);		
+	   }
 }
