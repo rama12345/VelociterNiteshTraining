@@ -14,9 +14,9 @@ public class Exercise1 {
 	      System.out.println(a);
 	      a = (byte) (a*2);
 	      System.out.println(a);
-	      a = (byte)(a*2);
+	      a = (byte) (a*2);
 	      System.out.println(a);
-	      a = (byte)(a*2);
+	      a = (byte) (a*2);
 	      System.out.println(a);		
 	   }
 }
