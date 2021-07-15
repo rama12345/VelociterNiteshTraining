@@ -1,0 +1,30 @@
+package com.velociter.nitesh.chapter3;
+
+public class Exercise1 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int myChoice = 0;
+		myChoice = (int) (6.0 * Math.random());
+		switch (myChoice) {
+		case 0:
+			System.out.println("Breakfast choice is scrambled eggs");
+			break;
+		case 1:
+			System.out.println("Breakfast choice is waffles");
+			break;
+		case 2:
+			System.out.println("Breakfast choice is fruit");
+			break;
+		case 3:
+			System.out.println("Breakfast choice is cereal");
+			break;
+		case 4:
+			System.out.println("Breakfast choice is toast");
+			break;
+		case 5:
+			System.out.println("Breakfast choice is yogurt");
+			break;
+		}
+	}
+
+}
