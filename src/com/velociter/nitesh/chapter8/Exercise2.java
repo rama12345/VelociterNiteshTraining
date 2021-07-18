@@ -5,40 +5,25 @@ import java.util.StringTokenizer;
 
 public class Exercise2 {
 
-	public static void main(String[] args) {
-//		String textOfString,arrayOfString[] = new String[50];
-//		int x=0,i;
-//		Scanner scanner = new Scanner(System.in);
-//		System.out.println("Enter the Sentences : ");
-//		textOfString = scanner.nextLine();
-//		StringTokenizer stringTokens = new StringTokenizer(textOfString, ",/:");
-//		while (stringTokens.hasMoreTokens()) {
-////			System.out.println(stringTokens.nextToken());
-//			arrayOfString[x] = stringTokens.nextElement().toString();
-//			x++;
-//		}
-//		for(i=0;i<x;i++) {
-//			System.out.println("Resulting String are :"+arrayOfString[i]+" ");
-//		}
-		
-		String s,w="",arraOfString[] = new String[50];
-		int i,l,nw=0;
+	public static void main(String[] args) {		
+		String textOfString,words="",arraOfString[] = new String[50];
+		int i,lenghtOfString,numberOfWords=0;
 		char ch;
-		Scanner sc = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the Sentence : ");
-		s = sc.nextLine();
-		s = s + " ";
-		l = s.length();
-		for(i=0;i<l;i++) {
-			ch = s.charAt(i);
+		textOfString = input.nextLine();
+		textOfString = textOfString + " ";
+		lenghtOfString = textOfString.length();
+		for(i=0;i<lenghtOfString;i++) {
+			ch = textOfString.charAt(i);
 			if(ch!=' ') {
-				w = w+ch;
+				words = words+ch;
 			}else{
-				arraOfString[nw++] = w + ":" ;
-				w="";
+				arraOfString[numberOfWords++] = words + ":" ;
+				words="";
 			}
 		}
-		for(i=0;i<nw;i++)
+		for(i=0;i<numberOfWords;i++)
 			System.out.print(arraOfString[i]+"");
 	}
 }
