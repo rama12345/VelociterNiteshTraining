@@ -5,7 +5,10 @@ public class Exercise2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[][] table = new int[12][12];
+		// loop for rows from 1 to 12
 		for (int row = 0; row <= table.length - 1; row++) {
+			// loop for columns from 1 to 12
+			// create the matrix of 12*12
 			for (int column = 0; column <= table.length - 1; column++) {
 				table[row][column] = (row + 1) * (column + 1);
 				if (table[row][column] < 10)

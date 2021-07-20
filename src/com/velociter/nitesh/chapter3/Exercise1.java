@@ -4,7 +4,9 @@ public class Exercise1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int myChoice = 0;
+		// get the random value of choice
 		myChoice = (int) (6.0 * Math.random());
+		// switch condition will start
 		switch (myChoice) {
 		case 0:
 			System.out.println("Breakfast choice is scrambled eggs");
