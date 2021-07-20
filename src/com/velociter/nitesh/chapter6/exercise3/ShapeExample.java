@@ -17,10 +17,12 @@ class Rectangle implements Shape {
 	}
 
 	public void draw() {
+		// draw rectangle
 		System.out.println("Rectangle has been drawn ");
 	}
 
 	public double area() {
+		// calculate the area of rectangle - length*width
 		return (double) (length * width);
 	}
 }
@@ -36,10 +38,12 @@ class Circle implements Shape {
 	}
 
 	public void draw() {
+		// draw circle
 		System.out.println("Circle has been drawn ");
 	}
 
 	public double area() {
+		// calculate the area of circle - 3.14*r*r/2
 		return (double) ((pi * radius * radius) / 2);
 	}
 }

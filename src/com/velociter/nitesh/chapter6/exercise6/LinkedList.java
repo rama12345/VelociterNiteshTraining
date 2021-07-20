@@ -1,4 +1,4 @@
-package com.velociter.nitesh.chapter6.exercise4;
+package com.velociter.nitesh.chapter6.exercise6;
 
 public class LinkedList {
 	Node head;
@@ -68,50 +68,4 @@ public class LinkedList {
 		node.next = n.next;
 		n.next = node;
 	}
-
-	// function to print the LinkedList
-	public void printlist(Node head) 
-	{
-		Node temp = head;
-
-		System.out.print("Head-> ");
-
-		while (temp != null) {
-
-			System.out.print(temp.data + "-> ");
-			temp = temp.next;
-		}
-
-		System.out.println("NULL");
-	}
-
-	// add new node at the end of the LinkedList
-	public void addToTheLast(Node node) 
-	{
-		if (head == null)
-			head = node;
-		else {
-			Node temp = head;
-			while (temp.next != null) {
-				temp = temp.next;
-			}
-			temp.next = node;
-		}
-	}
-
-	// reverse function
-	Node reverse(Node head) 
-	{
-		Node temp = head, prev = null, n = head.next;
-		while (n != null) {
-			temp.next = prev; // changing link of node
-			prev = temp;
-			temp = n;
-			n = n.next;
-		}
-		temp.next = prev;
-		head = temp;
-		return head;
-	}
-
 }

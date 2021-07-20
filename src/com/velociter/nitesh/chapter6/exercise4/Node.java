@@ -1,17 +1,15 @@
 package com.velociter.nitesh.chapter6.exercise4;
 
 public class Node {
-	private String token;
-
-	public Node(String token) {
-		this.token = token;
+	// data member of node data,next
+	int data;
+	Node next;
+	// constructor
+	Node() {
 	}
-
-	public String getToken() {
-		return token;
-	}
-
-	public void print() {
-		System.out.println(token);
+	// constructor with paramiter
+	Node(int d) {
+		data = d;
+		next = null;
 	}
 }

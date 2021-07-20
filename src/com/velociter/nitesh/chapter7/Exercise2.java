@@ -4,7 +4,7 @@ class IndexOutOfBoundsException {
 
 	public void divide() {
 		String[] arrayOfString = { "Rohit", "Shikar", "Virat", "Dhoni" };
-
+		// get the string into array from the end of length
 		for (int i = 0; i <= arrayOfString.length; i++) {
 			System.out.println(arrayOfString[i]);
 		}
@@ -13,8 +13,10 @@ class IndexOutOfBoundsException {
 
 public class Exercise2 {
 	public static void main(String args[]) {
+		// creating the object of Index Out of Bounds Exception
 		IndexOutOfBoundsException object = new IndexOutOfBoundsException();
 		try {
+			// find out the exception of array Index Out of Bounds Exception
 			object.divide();
 		} catch (Exception e) {
 			System.out.println("Exception is:" + e.getMessage());

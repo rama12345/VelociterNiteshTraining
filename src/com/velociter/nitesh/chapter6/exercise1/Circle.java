@@ -34,9 +34,9 @@ public class Circle extends Shape {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Circle cir = new Circle(15,5);
-		cir.area();
-		cir.show();
+		Circle circle = new Circle(15,5);
+		circle.area();
+		circle.show();
 	}
 
 }

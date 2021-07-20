@@ -1,6 +1,6 @@
 package com.velociter.nitesh.chapter6.exercise1;
 
-public class PolyLine extends Shape {
+public class PolyLine {
 
 	// Construct a polyline from an array of points
 	public PolyLine(Point[] points) {
@@ -34,10 +34,10 @@ public class PolyLine extends Shape {
 	}
 
 	// Construct a polyline from an array of coordinates
-	public PolyLine(double[][] coords) {
-		if (coords != null) {
-			for (int i = 0; i < coords.length; i++) {
-				addPoint(coords[i][0], coords[i][1]);
+	public PolyLine(double[][] coordinates) {
+		if (coordinates != null) {
+			for (int i = 0; i < coordinates.length; i++) {
+				addPoint(coordinates[i][0], coordinates[i][1]);
 			}
 		}
 	}
@@ -49,22 +49,4 @@ public class PolyLine extends Shape {
 
 	private ListPoint start; // First ListPoint in the list
 	private ListPoint end; // Last ListPoint in the list
-
-	@Override
-	public void area() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void volume() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void show() {
-		// TODO Auto-generated method stub
-
-	}
 }

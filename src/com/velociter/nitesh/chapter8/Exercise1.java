@@ -10,11 +10,13 @@ public class Exercise1 {
 		String textOfString;
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the Sentence : ");
+		// take the input from user
 		textOfString = input.nextLine();
-		StringTokenizer stringTokens = new StringTokenizer(textOfString,",");  
-	     while (stringTokens.hasMoreTokens()) {  
-	         System.out.println(stringTokens.nextToken());  
-	     }  
+		// separation of string from , using string tokenizer
+		StringTokenizer stringTokens = new StringTokenizer(textOfString, ",");
+		while (stringTokens.hasMoreTokens()) {
+			System.out.println(stringTokens.nextToken());
+		}
 	}
 
 }
