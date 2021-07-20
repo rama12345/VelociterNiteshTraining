@@ -10,7 +10,9 @@ public class Exercise1 {
 		if (null != args[0] && args[0].length() > 5 && args[0].endsWith(".txt")) {
 			// store file name into Object of File
 			File aFile = new File(args[0]);
+			// create and writing data of file.
 			FileOutputStream outputFile = null; 
+			// check the condition of file is exist or not
 			if (aFile.isFile()) {
 				System.out.println("file.txt already exists.");
 			} else {
