@@ -9,16 +9,16 @@ public class Exercise1 {
 		// get the name of file from command line argument
 		if (null != args[0] && args[0].length() > 5 && args[0].endsWith(".txt")) {
 			// store file name into Object of File
-			File aFile = new File(args[0]);
+			File txtFile = new File(args[0]);
 			// create and writing data of file.
-			FileOutputStream outputFile = null; 
+			FileOutputStream outputFile = null;
 			// check the condition of file is exist or not
-			if (aFile.isFile()) {
+			if (txtFile.isFile()) {
 				System.out.println("file.txt already exists.");
 			} else {
 				try {
 					// create a file by command line argument
-					outputFile = new FileOutputStream(aFile);
+					outputFile = new FileOutputStream(txtFile);
 					System.out.println("file.txt output stream created");
 				} catch (FileNotFoundException e) {
 					e.printStackTrace(System.err);

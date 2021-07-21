@@ -37,21 +37,21 @@ public class Exercise3 {
 		for (File root : roots) {
 			System.out.println(root);
 			// Create an object that is a directory
-			File myDir = new File("C:/jdk1.5.0/src/java");
+			File myDirectory = new File("C:/jdk1.5.0/src/java");
 			// filtering the files from root folder
-			FilenameFilter select = new FileListFilter("F", "java");
+			FilenameFilter fileFilter = new FileListFilter("F", "java");
 			// pass filted file from root
-			File[] contents = myDir.listFiles(select);
+			File[] contents = myDirectory.listFiles(fileFilter);
 			// check the condition of filted file into list of files
 			if (contents != null) {
-				System.out.println(
-						"\nThe " + contents.length + " matching items in the directory, " + myDir.getName() + ", are:");
+				System.out.println("\nThe " + contents.length + " matching items in the directory, "
+						+ myDirectory.getName() + ", are:");
 				for (File file : contents) {
 					System.out.println(file + " is a " + (file.isDirectory() ? "directory" : "file")
 							+ " last modified on\n" + new Date(file.lastModified()));
 				}
 			} else {
-				System.out.println(myDir.getName() + " is not a directory");
+				System.out.println(myDirectory.getName() + " is not a directory");
 			}
 			return;
 		}
