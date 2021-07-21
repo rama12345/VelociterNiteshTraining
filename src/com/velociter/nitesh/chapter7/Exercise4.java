@@ -20,14 +20,14 @@ class ArithmeticExceptionExample {
 public class Exercise4 {
 	public static void main(String args[]) {
 		// creating the object of Arithmetic Exception Example
-		ArithmeticExceptionExample iae = new ArithmeticExceptionExample();
+		ArithmeticExceptionExample arithmeticExceptionExample = new ArithmeticExceptionExample();
 		try {
 			// find out the exception of Arithmetic Exception
-			iae.iteratedExceptionOccures();
+			arithmeticExceptionExample.iteratedExceptionOccures();
 		} catch (ArithmeticException e) {
 			System.out.println("ArithmeticException Exception Occures:" + e.getMessage());
 		} finally {
-			System.out.println("Iteration count:" + iae.iteratedCount);
+			System.out.println("Iteration count:" + arithmeticExceptionExample.iteratedCount);
 		}
 	}
 }

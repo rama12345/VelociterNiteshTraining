@@ -21,10 +21,10 @@ class IteratedArithmeticException {
 public class Exercise3 {
 	public static void main(String args[]) {
 		// creating the object of Iterated Arithmetic Exception
-		IteratedArithmeticException iae = new IteratedArithmeticException();
+		IteratedArithmeticException iteratedArithmeticException = new IteratedArithmeticException();
 		try {
 			// find out the exception of Iterated Arithmetic Exception
-			iae.iteratedExceptionOccures();
+			iteratedArithmeticException.iteratedExceptionOccures();
 		} catch (ArithmeticException e) {
 			System.out.println("ArithmeticException Exception Occures:" + e.getMessage());
 		}

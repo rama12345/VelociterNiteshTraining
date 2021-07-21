@@ -14,10 +14,10 @@ class IndexOutOfBoundsException {
 public class Exercise2 {
 	public static void main(String args[]) {
 		// creating the object of Index Out of Bounds Exception
-		IndexOutOfBoundsException object = new IndexOutOfBoundsException();
+		IndexOutOfBoundsException indexOutOfBoundsException = new IndexOutOfBoundsException();
 		try {
 			// find out the exception of array Index Out of Bounds Exception
-			object.divide();
+			indexOutOfBoundsException.divide();
 		} catch (Exception e) {
 			System.out.println("Exception is:" + e.getMessage());
 		}

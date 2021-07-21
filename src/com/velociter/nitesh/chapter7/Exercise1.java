@@ -4,7 +4,7 @@ public class Exercise1 {
 	public static void main(String args[]) {
 		String nameOfString = null;
 		// take the four digit into array
-		int[] array = { 1, 2, 3, 4 };
+		int[] numberArray = { 1, 2, 3, 4 };
 		try {
 			// check the condition Null Pointer Exception will occur
 			if (nameOfString.equals("Java")) {
@@ -18,7 +18,7 @@ public class Exercise1 {
 		}
 		try {
 			// check the condition Negative Array Size Exception will occur
-			int[] array2 = new int[-10];
+			int[] numberArray2 = new int[-10];
 
 		} catch (NegativeArraySizeException e1) {
 
@@ -28,8 +28,8 @@ public class Exercise1 {
 		}
 		try {
 			// check the condition Array IndexOut Of Bounds Exception will occur
-			for (int i = 0; i <= array.length; i++) {
-				System.out.println(array[i]);
+			for (int i = 0; i <= numberArray.length; i++) {
+				System.out.println(numberArray[i]);
 			}
 		} catch (ArrayIndexOutOfBoundsException e2) {
 
