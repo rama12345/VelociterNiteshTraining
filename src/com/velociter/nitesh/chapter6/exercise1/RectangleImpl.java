@@ -1,9 +1,9 @@
 package com.velociter.nitesh.chapter6.exercise1;
 
-public class Rectangle extends Shape{
+public class RectangleImpl extends ShapeFactory{
 	int weight,height,length;
 	float areaOfRectangle,volumnOfRectangle;
-	 public Rectangle(int weight, int height,int length) {
+	 public RectangleImpl(int weight, int height,int length) {
 		super();
 		this.weight = weight;
 		this.height = height;
@@ -28,7 +28,7 @@ public class Rectangle extends Shape{
 				+ areaOfRectangle + ", volumnOfRectangle=" + volumnOfRectangle + "]";
 	}
 	public static void main(String[]args) {
-		Rectangle rc = new Rectangle(5, 12, 6);
+		RectangleImpl rc = new RectangleImpl(5, 12, 6);
 		rc.area();
 		rc.volume();
 		rc.show();

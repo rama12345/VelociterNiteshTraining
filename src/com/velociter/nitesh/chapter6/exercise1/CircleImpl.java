@@ -1,9 +1,9 @@
 package com.velociter.nitesh.chapter6.exercise1;
 
-public class Circle extends Shape {
+public class CircleImpl extends ShapeFactory {
 	double areaOfCircle,radius;
 	//create constructor Of Circle
-	public Circle(double areaOfCircle, double radius) {
+	public CircleImpl(double areaOfCircle, double radius) {
 		super();
 		this.areaOfCircle = areaOfCircle;
 		this.radius = radius;
@@ -34,7 +34,7 @@ public class Circle extends Shape {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Circle circle = new Circle(15,5);
+		CircleImpl circle = new CircleImpl(15,5);
 		circle.area();
 		circle.show();
 	}

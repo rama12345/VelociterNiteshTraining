@@ -1,6 +1,6 @@
 package com.velociter.nitesh.chapter6.exercise1;
 
-public class Line extends Shape{
+public class LineImpl extends ShapeFactory{
 	public static String randXYPoint(){
 	    //For x and y, the maximum point is 1 and Minimum point is -1
 	    //maximum number

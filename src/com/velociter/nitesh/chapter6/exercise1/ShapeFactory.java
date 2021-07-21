@@ -1,6 +1,6 @@
 package com.velociter.nitesh.chapter6.exercise1;
 
-public abstract class Shape {
+public abstract class ShapeFactory {
 	protected int x;
 	protected int y;
 	// area and volume find out from shape

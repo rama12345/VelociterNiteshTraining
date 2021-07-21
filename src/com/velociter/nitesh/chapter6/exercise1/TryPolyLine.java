@@ -5,7 +5,7 @@ public class TryPolyLine {
 		// Create an array of coordinate pairs
 		double[][] coordinates = { { 1., 1. }, { 1., 2. }, { 2., 3. }, { -3., 5. }, { -5., 1. }, { 0., 0. } };
 		// Create a polyline from the coordinates and display it
-		PolyLine polygon = new PolyLine(coordinates);
+		PolyLineImpl polygon = new PolyLineImpl(coordinates);
 		System.out.println(polygon);
 		// Add a point and display the polyline again
 		polygon.addPoint(10., 10.);
@@ -15,7 +15,7 @@ public class TryPolyLine {
 		for (int i = 0; i < points.length; i++)
 			points[i] = new Point(coordinates[i][0], coordinates[i][1]);
 		// Use the points to create a new polyline and display it
-		PolyLine newPoly = new PolyLine(points);
+		PolyLineImpl newPoly = new PolyLineImpl(points);
 		System.out.println(newPoly);
 	}
 }

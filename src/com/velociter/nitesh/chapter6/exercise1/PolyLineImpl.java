@@ -1,9 +1,9 @@
 package com.velociter.nitesh.chapter6.exercise1;
 
-public class PolyLine {
+public class PolyLineImpl extends ShapeFactory{
 
 	// Construct a polyline from an array of points
-	public PolyLine(Point[] points) {
+	public PolyLineImpl(Point[] points) {
 		if (points != null) { // Make sure there is an array
 			for (Point p : points) {
 				addPoint(p);
@@ -34,7 +34,7 @@ public class PolyLine {
 	}
 
 	// Construct a polyline from an array of coordinates
-	public PolyLine(double[][] coordinates) {
+	public PolyLineImpl(double[][] coordinates) {
 		if (coordinates != null) {
 			for (int i = 0; i < coordinates.length; i++) {
 				addPoint(coordinates[i][0], coordinates[i][1]);
@@ -49,4 +49,21 @@ public class PolyLine {
 
 	private ListPoint start; // First ListPoint in the list
 	private ListPoint end; // Last ListPoint in the list
+	@Override
+	public void area() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void volume() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void show() {
+		// TODO Auto-generated method stub
+		
+	}
 }
