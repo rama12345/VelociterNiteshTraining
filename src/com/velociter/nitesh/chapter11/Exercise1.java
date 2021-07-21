@@ -28,7 +28,7 @@ public class Exercise1 {
 			// check if data into the file not to empty.
 			while (inputChannel.read(bufferStream) != -1) {
 				// print all the character which it will store.
-				System.out.println("String read: " + ((ByteBuffer) (bufferStream.flip())).asCharBuffer().toString());
+				System.out.println("Resulting String : " + ((ByteBuffer) (bufferStream.flip())).asCharBuffer().toString());
 				// Clear the buffer for the next read
 				bufferStream.clear(); 
 			}
