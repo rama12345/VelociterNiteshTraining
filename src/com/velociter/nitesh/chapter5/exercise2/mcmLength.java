@@ -1,9 +1,9 @@
 package com.velociter.nitesh.chapter5.exercise2;
 
 public class mcmLength {
-	  public static final int CM_PER_M = 100;
-	  public static final int MM_PER_CM = 10;
-	  public static final int MM_PER_M = MM_PER_CM*CM_PER_M;
+	  public static final int CentimiterPerMetter = 100;
+	  public static final int MillimetterPerCentimiter = 10;
+	  public static final int MillimetterPerMetter = MillimetterPerCentimiter*CentimiterPerMetter;
 	 
 	  // Private member variables:
 	  private int meters = 0;
@@ -11,14 +11,14 @@ public class mcmLength {
 	  private int millimeters = 0;
 	 
 	  // Constructors:
-	  public mcmLength(double cm) {
-	    this((int)Math.round(cm*MM_PER_CM));
+	  public mcmLength(double centimetter) {
+	    this((int)Math.round(centimetter*MillimetterPerCentimiter));
 	  }
 	 
-	  public mcmLength(int mm) {
-	    meters = mm/MM_PER_M;
-	    centimeters = (mm - meters*MM_PER_M)/MM_PER_CM;
-	    millimeters = mm - meters*MM_PER_M - centimeters*MM_PER_CM;
+	  public mcmLength(int millimetter) {
+	    meters = millimetter/MillimetterPerCentimiter;
+	    centimeters = (millimetter - meters*MillimetterPerCentimiter)/MillimetterPerCentimiter;
+	    millimeters = millimetter - meters*MillimetterPerCentimiter - centimeters*MillimetterPerCentimiter;
 	  }
 	 
 	  // If we were to just store the argument values, we could
@@ -26,8 +26,8 @@ public class mcmLength {
 	  // values passed as arguments are not valid.
 	  // With the approach here we guarantee all values are valid
 	  // in the object that is created.
-	  public mcmLength(int m, int cm, int mm) {
-	    this(m*MM_PER_M + cm*MM_PER_CM + mm);
+	  public mcmLength(int metter, int centimetter, int millimetter) {
+	    this(metter*MillimetterPerCentimiter + centimetter*MillimetterPerCentimiter + millimetter);
 	  }
 	 
 	  public mcmLength(){}
@@ -38,39 +38,39 @@ public class mcmLength {
 	    return Integer.toString(meters) + "m " + centimeters + "cm " + millimeters + "mm";
 	  }
 	 
-	  public int toMM() {
-	    return meters*MM_PER_M + centimeters*MM_PER_CM + millimeters;
+	  public int toMilliMetter() {
+	    return meters*MillimetterPerCentimiter + centimeters*MillimetterPerCentimiter + millimeters;
 	  }
 	 
 	 
 	  public double toMeters() {
-	    return meters + ((double)(centimeters))/CM_PER_M + ((double)(millimeters))/MM_PER_M;
+	    return meters + ((double)(centimeters))/CentimiterPerMetter + ((double)(millimeters))/MillimetterPerCentimiter;
 	  }
 	 
 	  // All of the following methods use the toMM():
 	  public mcmLength add(mcmLength length)
 	  {
-	    return new mcmLength(toMM()+length.toMM());
+	    return new mcmLength(toMilliMetter()+length.toMilliMetter());
 	  }
 	 
 	  public mcmLength subtract(mcmLength length)
 	  {
-	    return new mcmLength(toMM()-length.toMM());
+	    return new mcmLength(toMilliMetter()-length.toMilliMetter());
 	  }
 	 
 	  public mcmLength multiply(int n)
 	  {
-	    return new mcmLength(n*toMM());
+	    return new mcmLength(n*toMilliMetter());
 	  }
 	 
 	  public mcmLength divide(int y)
 	  {
-	    return new mcmLength(toMM()/y);
+	    return new mcmLength(toMilliMetter()/y);
 	  }
 	 
 	  //Calculate area in square mm
 	  public long area(mcmLength length) {
-	    return (toMM()*length.toMM());
+	    return (toMilliMetter()*length.toMilliMetter());
 	  }
 	 
 	  // Compare two lengths
@@ -82,14 +82,14 @@ public class mcmLength {
 	  }
 	 
 	  public boolean equals(mcmLength length) {
-	   return toMM() == length.toMM();
+	   return toMilliMetter() == length.toMilliMetter();
 	  }
 	 
 	  public boolean lessThan(mcmLength length) {
-	   return toMM() < length.toMM();
+	   return toMilliMetter() < length.toMilliMetter();
 	  }
 	 
 	  public boolean greaterThan(mcmLength length) {
-	   return toMM() > length.toMM();
+	   return toMilliMetter() > length.toMilliMetter();
 	  }
 }

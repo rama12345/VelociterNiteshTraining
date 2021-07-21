@@ -1,9 +1,9 @@
 package com.velociter.nitesh.chapter5.exercise3;
 
 public class tkgWeight {
-	public static final double TN_PER_KG = 0.00098421;
-	public static final int GM_PER_TN = 1016;
-	public static final int TN_PER_GM = 1000;
+	public static final double TonPerKilogram = 0.00098421;
+	public static final int GramPerTon = 1016;
+	public static final int TonPerGram = 1000;
 
 	// Private member variables:
 	private int ton = 0;
@@ -11,8 +11,8 @@ public class tkgWeight {
 	private int gram = 0;
 
 	// Constructors:
-	public tkgWeight(double km) {
-		this((int) Math.round(km * GM_PER_TN));
+	public tkgWeight(double kilogram) {
+		this((int) Math.round(kilogram * GramPerTon));
 	}
 
 	// If we were to just store the argument values, we could
@@ -20,14 +20,14 @@ public class tkgWeight {
 	// values passed as arguments are not valid.
 	// With the approach here we guarantee all values are valid
 	// in the object that is created.
-	public tkgWeight(int gm) {
-		ton = gm / TN_PER_GM;
-		kilograme = (gm - ton * TN_PER_GM) / GM_PER_TN;
-		gram = gm - ton * TN_PER_GM - kilograme * GM_PER_TN;
+	public tkgWeight(int gram) {
+		ton = gram / TonPerGram;
+		kilograme = (gram - ton * TonPerGram) / GramPerTon;
+		gram = gram - ton * TonPerGram - kilograme * GramPerTon;
 	}
 
-	public tkgWeight(int tn, int kg, int gm) {
-		this(tn * TN_PER_GM + kg * GM_PER_TN + gm);
+	public tkgWeight(int ton, int kilogram, int gram) {
+		this(ton * TonPerGram + kilogram * GramPerTon + gram);
 	}
 
 	public tkgWeight() {
@@ -36,37 +36,37 @@ public class tkgWeight {
 	// Methods
 	// Replaces the default toString method in Object:
 	public String toString() {
-		return Integer.toString(ton) + "tn " + kilograme + "km " + gram + "gm";
+		return Integer.toString(ton) + "ton " + kilograme + "kilogram " + gram + "gram";
 	}
 
-	public int toGM() {
-		return ton * TN_PER_GM + kilograme * GM_PER_TN + gram;
+	public int toGram() {
+		return ton * TonPerGram + kilograme * GramPerTon + gram;
 	}
 
 	public double toTons() {
-		return ton + ((double) (kilograme)) / TN_PER_KG + ((double) (gram)) / TN_PER_GM;
+		return ton + ((double) (kilograme)) / TonPerKilogram + ((double) (gram)) / TonPerGram;
 	}
 
 	// All of the following methods use the toMM():
 	public tkgWeight add(tkgWeight length) {
-		return new tkgWeight(toGM() + length.toGM());
+		return new tkgWeight(toGram() + length.toGram());
 	}
 
 	public tkgWeight subtract(tkgWeight length) {
-		return new tkgWeight(toGM() - length.toGM());
+		return new tkgWeight(toGram() - length.toGram());
 	}
 
 	public tkgWeight multiply(int n) {
-		return new tkgWeight(n * toGM());
+		return new tkgWeight(n * toGram());
 	}
 
 	public tkgWeight divide(int y) {
-		return new tkgWeight(toGM() / y);
+		return new tkgWeight(toGram() / y);
 	}
 
 	// Calculate area in square gm
 	public long area(tkgWeight length) {
-		return (toGM() * length.toGM());
+		return (toGram() * length.toGram());
 	}
 
 	// Compare two lengths
@@ -78,14 +78,14 @@ public class tkgWeight {
 	}
 
 	public boolean equals(tkgWeight length) {
-		return toGM() == length.toGM();
+		return toGram() == length.toGram();
 	}
 
 	public boolean lessThan(tkgWeight length) {
-		return toGM() < length.toGM();
+		return toGram() < length.toGram();
 	}
 
 	public boolean greaterThan(tkgWeight length) {
-		return toGM() > length.toGM();
+		return toGram() > length.toGram();
 	}
 }

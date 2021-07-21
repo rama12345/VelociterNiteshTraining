@@ -35,20 +35,20 @@ public class TestLengths {
 		}
 
 		// Compare successive lengths using compare() method
-		String compareStr = null;
+		String compareString = null;
 		for (int i = 0; i < lengths.length - 1; ++i) {
 			switch (lengths[i].compare(lengths[i + 1])) {
 			case -1:
-				compareStr = " is less than length ";
+				compareString = " is less than length ";
 				break;
 			case 0:
-				compareStr = " is equal to length ";
+				compareString = " is equal to length ";
 				break;
 			case 1:
-				compareStr = " is greater than length ";
+				compareString = " is greater than length ";
 				break;
 			}
-			System.out.println("Length " + lengths[i] + compareStr + lengths[i + 1]);
+			System.out.println("Length " + lengths[i] + compareString + lengths[i + 1]);
 		}
 	}
 }
