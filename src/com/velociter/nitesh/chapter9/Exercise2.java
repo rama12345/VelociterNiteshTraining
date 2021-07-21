@@ -24,24 +24,24 @@ public class Exercise2 {
 	
 	// find and get the last index of extension.
 	public static String getFileExtension(String f) {
-		String ext = "";
+		String extension = "";
 		// find the last index of file extension.
 		int i = f.lastIndexOf('.');
 		// fetching the last index of substring and store into empty string. 
 		if (i > 0 && i < f.length() - 1) {
-			ext = f.substring(i + 1);
+			extension = f.substring(i + 1);
 		}
-		return ext;
+		return extension;
 	}
 
 	public static void main(String args[]) throws Exception {
 		// create string to store filename
 		String filename = "D:/myFile.txt";
 		// create file class object to store file
-		File aFile = new File(filename);
+		File txtFile = new File(filename);
 		FileOutputStream outputFile = null; // Place to store the stream reference
 		// check the file existence or not
-		if (aFile.isFile()) {
+		if (txtFile.isFile()) {
 			// check the extension and rename it.
 			System.out.println(renameFileExtension(filename, "123"));
 			System.out.println("myFile.txt already exists.");
@@ -50,7 +50,7 @@ public class Exercise2 {
 			try {
 				// if file not exist it will create.
 				// Create the stream opened to append data
-				outputFile = new FileOutputStream(aFile);
+				outputFile = new FileOutputStream(txtFile);
 				// check the extension and rename it.
 				System.out.println(renameFileExtension(filename, "123"));
 				System.out.println("myFile.txt output stream created");
