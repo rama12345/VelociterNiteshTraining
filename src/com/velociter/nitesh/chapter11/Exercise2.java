@@ -12,40 +12,40 @@ import java.util.Scanner;
 
 public class Exercise2 {
 	public static void main(String[] args) throws IOException {
-		File aFile = new File("D:/primes.txt");
-		FileInputStream inFile = null;
+		File txtPrimesFile = new File("D:/primes.txt");
+		FileInputStream inputFile = null;
 		try {
-			inFile = new FileInputStream(aFile);
+			inputFile = new FileInputStream(txtPrimesFile);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace(System.err);
 			System.exit(1);
 		}
-		FileChannel inChannel = inFile.getChannel();
+		FileChannel inChannel = inputFile.getChannel();
 		Scanner input = new Scanner(System.in);
 		System.out.println("How many prime number you want to enter : ");
 		final int PRIMECOUNT = input.nextInt();
-		ByteBuffer buf = ByteBuffer.allocate(8 * PRIMECOUNT);
+		ByteBuffer byteBuffer  = ByteBuffer.allocate(8 * PRIMECOUNT);
 		long[] primes = new long[PRIMECOUNT];
 		try {
 			int primesRead = 0;
-			while (inChannel.read(buf) != -1) {
+			while (inChannel.read(byteBuffer) != -1) {
 				try {
-					((ByteBuffer) (buf.flip())).asLongBuffer().get(primes);
+					((ByteBuffer) (byteBuffer.flip())).asLongBuffer().get(primes);
 					primesRead = primes.length;
 				} catch (BufferUnderflowException e) {
-					LongBuffer longBuf = buf.asLongBuffer();
-					primesRead = longBuf.remaining();
-					longBuf.get(primes, 0, primesRead);
+					LongBuffer longBuffer = byteBuffer.asLongBuffer();
+					primesRead = longBuffer.remaining();
+					longBuffer.get(primes, 0, primesRead);
 				}
 				// List the primes read on the same line
 				System.out.println();
 				for (int i = 0; i < primesRead; i++) {
 					System.out.printf("%10d", primes[i]);
 				}
-				buf.clear(); // Clear the buffer for the next read
+				byteBuffer.clear(); // Clear the buffer for the next read
 			}
 			System.out.println("\nEOF reached.");
-			inFile.close(); // Close the file and the channel
+			inputFile.close(); // Close the file and the channel
 		} catch (IOException e) {
 			e.printStackTrace(System.err);
 			System.exit(1);
