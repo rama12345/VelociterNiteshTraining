@@ -1,9 +1,9 @@
 package com.velociter.nitesh.chapter5.exercise3;
 
 public class tkgWeight {
-	public static final double TonPerKilogram = 0.00098421;
-	public static final int GramPerTon = 1016;
-	public static final int TonPerGram = 1000;
+	public static final double TON_PER_KILOGRAM = 0.00098421;
+	public static final int GRAM_PER_TON = 1016;
+	public static final int TON_PER_GRAM = 1000;
 
 	// Private member variables:
 	private int ton = 0;
@@ -12,7 +12,7 @@ public class tkgWeight {
 
 	// Constructors:
 	public tkgWeight(double kilogram) {
-		this((int) Math.round(kilogram * GramPerTon));
+		this((int) Math.round(kilogram * GRAM_PER_TON));
 	}
 
 	// If we were to just store the argument values, we could
@@ -21,13 +21,13 @@ public class tkgWeight {
 	// With the approach here we guarantee all values are valid
 	// in the object that is created.
 	public tkgWeight(int gram) {
-		ton = gram / TonPerGram;
-		kilograme = (gram - ton * TonPerGram) / GramPerTon;
-		gram = gram - ton * TonPerGram - kilograme * GramPerTon;
+		ton = gram / TON_PER_GRAM;
+		kilograme = (gram - ton * TON_PER_GRAM) / GRAM_PER_TON;
+		gram = gram - ton * TON_PER_GRAM - kilograme * GRAM_PER_TON;
 	}
 
 	public tkgWeight(int ton, int kilogram, int gram) {
-		this(ton * TonPerGram + kilogram * GramPerTon + gram);
+		this(ton * TON_PER_GRAM + kilogram * GRAM_PER_TON + gram);
 	}
 
 	public tkgWeight() {
@@ -40,11 +40,11 @@ public class tkgWeight {
 	}
 
 	public int toGram() {
-		return ton * TonPerGram + kilograme * GramPerTon + gram;
+		return ton * TON_PER_GRAM + kilograme * GRAM_PER_TON + gram;
 	}
 
 	public double toTons() {
-		return ton + ((double) (kilograme)) / TonPerKilogram + ((double) (gram)) / TonPerGram;
+		return ton + ((double) (kilograme)) / TON_PER_KILOGRAM + ((double) (gram)) / TON_PER_GRAM;
 	}
 
 	// All of the following methods use the toMM():

@@ -1,9 +1,9 @@
 package com.velociter.nitesh.chapter5.exercise2;
 
 public class mcmLength {
-	  public static final int CentimeterPerMeter = 100;
-	  public static final int MillimeterPerCentimeter = 10;
-	  public static final int MillimeterPerMeter = MillimeterPerCentimeter*CentimeterPerMeter;
+	  public static final int CENTIMETER_PER_METER = 100;
+	  public static final int MILLIMETER_PER_CENTIMETER = 10;
+	  public static final int MILLIMETER_PER_METER = MILLIMETER_PER_CENTIMETER*CENTIMETER_PER_METER;
 	 
 	  // Private member variables:
 	  private int meters = 0;
@@ -12,13 +12,13 @@ public class mcmLength {
 	 
 	  // Constructors:
 	  public mcmLength(double centimeter) {
-	    this((int)Math.round(centimeter*MillimeterPerCentimeter));
+	    this((int)Math.round(centimeter*MILLIMETER_PER_CENTIMETER));
 	  }
 	 
 	  public mcmLength(int millimeter) {
-	    meters = millimeter/MillimeterPerCentimeter;
-	    centimeters = (millimeter - meters*MillimeterPerCentimeter)/MillimeterPerCentimeter;
-	    millimeters = millimeter - meters*MillimeterPerCentimeter - centimeters*MillimeterPerCentimeter;
+	    meters = millimeter/MILLIMETER_PER_CENTIMETER;
+	    centimeters = (millimeter - meters*MILLIMETER_PER_CENTIMETER)/MILLIMETER_PER_CENTIMETER;
+	    millimeters = millimeter - meters*MILLIMETER_PER_CENTIMETER - centimeters*MILLIMETER_PER_CENTIMETER;
 	  }
 	 
 	  // If we were to just store the argument values, we could
@@ -27,7 +27,7 @@ public class mcmLength {
 	  // With the approach here we guarantee all values are valid
 	  // in the object that is created.
 	  public mcmLength(int meter, int centimeter, int millimeter) {
-	    this(meter*MillimeterPerCentimeter + centimeter*MillimeterPerCentimeter + millimeter);
+	    this(meter*MILLIMETER_PER_CENTIMETER + centimeter*MILLIMETER_PER_CENTIMETER + millimeter);
 	  }
 	 
 	  public mcmLength(){}
@@ -39,12 +39,12 @@ public class mcmLength {
 	  }
 	 
 	  public int toMilliMeter() {
-	    return meters*MillimeterPerCentimeter + centimeters*MillimeterPerCentimeter + millimeters;
+	    return meters*MILLIMETER_PER_CENTIMETER + centimeters*MILLIMETER_PER_CENTIMETER + millimeters;
 	  }
 	 
 	 
 	  public double toMeters() {
-	    return meters + ((double)(centimeters))/CentimeterPerMeter + ((double)(millimeters))/MillimeterPerCentimeter;
+	    return meters + ((double)(centimeters))/CENTIMETER_PER_METER + ((double)(millimeters))/MILLIMETER_PER_CENTIMETER;
 	  }
 	 
 	  // All of the following methods use the toMM():
