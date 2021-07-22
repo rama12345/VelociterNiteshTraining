@@ -8,23 +8,23 @@ public class Exercise1 {
 		String dataStore;
 		try {
 			// Accept a string
-			String str = "Hand/ling /n Java /" + " FileWriter / FileReader";
-			char ch;
+			String textOfstring = "Hand/ling /n Java /" + " FileWriter / FileReader";
+			char characterOfString;
 			// attach a file to FileWriter
-			FileWriter fw = new FileWriter("D:/myFile.txt");
+			FileWriter fileWriter = new FileWriter("D:/myFile.txt");
 			// read character wise from string and write
 			// into FileWriter
-			for (int i = 0; i < str.length(); i++) {
-				ch = str.charAt(i);
-				if (ch == '/') {
+			for (int i = 0; i < textOfstring.length(); i++) {
+				characterOfString = textOfstring.charAt(i);
+				if (characterOfString == '/') {
 					// do nothing
 				} else {
-					fw.write(str.charAt(i));
+					fileWriter.write(textOfstring.charAt(i));
 				}
 			}
 			System.out.println("Writing successful");
 			// close the file
-			fw.close();
+			fileWriter.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
