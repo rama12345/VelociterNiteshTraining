@@ -10,7 +10,7 @@ import java.nio.LongBuffer;
 import java.nio.channels.FileChannel;
 import java.util.Scanner;
 
-public class Exercise2 {
+public class Exercise2 {	
 	public static void main(String[] args) throws IOException {
 		// create object of File to store files
 		File txtPrimesFile = new File("D:/primes.txt");
@@ -26,47 +26,44 @@ public class Exercise2 {
 		}
 		// fetch and reading data via input file channel.
 		FileChannel inChannel = inputFile.getChannel();
-		// get the n number of prime given by user
+		// store number of Prime in PRIMECOUNT and start it.
 		Scanner input = new Scanner(System.in);
 		System.out.println("How many prime number you want to enter : ");
-		// store number of Prim in PRIMECOUNT
-		int PRIMECOUNT = input.nextInt();
+		int primeStart = 1;
 		// store data into the buffer at the time 48 byte.
-		ByteBuffer byteBuffer  = ByteBuffer.allocate(8 * PRIMECOUNT);
-		long[] primes = new long[PRIMECOUNT];
+		ByteBuffer byteBuffer = ByteBuffer.allocate(8 * 1024);
+		// set the hight value at the end of prime.
+		int primeEnd = input.nextInt();
 		try {
-			int primesRead = 0;
-			// check  the condition if channel of reding data is not end.
+			// check the condition if channel of reding data is not end.
 			while (inChannel.read(byteBuffer) != -1) {
-				try {
-					// converting and storing into the long buffer
-					((ByteBuffer) (byteBuffer.flip())).asLongBuffer().get(primes);
-					// find out the length of file to be read.
-					primesRead = primes.length;
-				} catch (BufferUnderflowException e) {
-					// storing into the long buffer in buffer byte
-					LongBuffer longBuffer = byteBuffer.asLongBuffer();
-					// read the remaining prime 
-					primesRead = longBuffer.remaining();
-					// get the specific prime number
-					longBuffer.get(primes, 0, primesRead);
+				while (primeStart < primeEnd) {
+					boolean flag = false;
+					// condition if the end of PrimeCounting 
+					for (int i = 2; i <= primeStart / 2; ++i) {
+						// condition for nonprime number
+						if (primeStart % i == 0) {
+							// set it flag true to get non prime and break it. 
+							flag = true;
+							break;
+						}
+					}
+					// check the end of the condition will get prime between 15-30.  
+					if (!flag && primeStart != 0 && primeStart != 1)
+						System.out.print(primeStart + " ");
+					// incrementing the prime count from 15 to end of 30.
+					++primeStart;
 				}
-				// List the primes read on the same line
-				System.out.println();
-				// looping for print the specific prime numbers
-				for (int i = 0; i < primesRead; i++) {
-					System.out.printf("%10d", primes[i]);
-				}
-				// Clear the buffer for the next read
-				byteBuffer.clear(); 
+				// at the end of the prime file.
+				System.out.println("\nEOF reached.");
+				// Close the file and the channel
+				inputFile.close();
 			}
-			System.out.println("\nEOF reached.");
-			// Close the file and the channel
-			inputFile.close(); 
 		} catch (IOException e) {
-			e.printStackTrace(System.err);
+			System.out.println("Exception is : "+e.getMessage());
 			System.exit(1);
 		}
 		System.exit(0);
 	}
+	
 }
