@@ -28,9 +28,9 @@ public class RectangleImpl extends ShapeFactory{
 				+ areaOfRectangle + ", volumnOfRectangle=" + volumnOfRectangle + "]";
 	}
 	public static void main(String[]args) {
-		RectangleImpl rc = new RectangleImpl(5, 12, 6);
-		rc.area();
-		rc.volume();
-		rc.show();
+		RectangleImpl rectangle = new RectangleImpl(5, 12, 6);
+		rectangle.area();
+		rectangle.volume();
+		rectangle.show();
 	}
 }
