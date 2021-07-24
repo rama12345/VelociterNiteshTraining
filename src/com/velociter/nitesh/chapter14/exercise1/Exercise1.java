@@ -1,4 +1,4 @@
-package com.velociter.nitesh.chapter14;
+package com.velociter.nitesh.chapter14.exercise1;
 
 import java.util.Scanner;
 import java.util.Vector;
