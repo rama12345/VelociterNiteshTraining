@@ -15,7 +15,7 @@ public class Exercise6 {
 				+ "How does your dog smell then?\n" + "My dog smells horrible.\n" + "How does your dog smell then?\n"
 				+ "My dog smells horrible.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n";
 		String lineOfString = null;
-		int count = 000;
+		int count = 0;
 		String fileName = "D:/regulerEx1.txt";
 		BufferedWriter bufferWriter = null;
 		BufferedReader bufferReader = null;
@@ -37,7 +37,7 @@ public class Exercise6 {
 			while ((lineOfString = bufferReader.readLine()) != null) {
 				count++;
 				// print data from file line by line.
-				System.out.println("00" + count + " " + lineOfString);
+				System.out.println(count + " " + lineOfString);
 			}
 			// close the reading operation.
 			bufferReader.close();
