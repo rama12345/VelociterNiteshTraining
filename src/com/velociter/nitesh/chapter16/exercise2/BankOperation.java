@@ -8,7 +8,7 @@ public class BankOperation {
 		int[] totalCredits = new int[initialBalance.length]; // Two different cr totals
 		int[] totalDebits = new int[initialBalance.length]; // Two different db totals
 		int transactionCount = 20; // Number of debits and of credits
-		// Create the bank and the clerks...
+		// Create the bank and the clerks
 		Bank theBank = new Bank(); // Create a bank
 		Clerk clerk1 = new Clerk(theBank); // Create the first clerk
 		Clerk clerk2 = new Clerk(theBank); // Create the second clerk
