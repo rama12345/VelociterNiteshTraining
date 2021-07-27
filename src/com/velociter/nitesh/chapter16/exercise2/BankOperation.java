@@ -19,14 +19,14 @@ public class BankOperation {
 			totalCredits[i] = totalDebits[i] = 0;
 		}
 		// Create transactions randomly distributed between the accounts
-		Random rand = new Random();
+		Random random = new Random();
 		Transaction transaction; // Stores a transaction
 		int amount = 0; // Stores an amount of money
 		int select = 0; // Selects an account
 		for (int i = 1; i <= transactionCount; i++) {
 			// Choose an account at random for credit operation
-			select = rand.nextInt(accounts.length);
-			amount = 50 + rand.nextInt(26); // Generate amount of $50 to $75
+			select = random.nextInt(accounts.length);
+			amount = 50 + random.nextInt(26); // Generate amount of $50 to $75
 			transaction = new Transaction(accounts[select], // Account
 					Transaction.CREDIT, // Credit transaction
 					amount); // of amount
@@ -41,8 +41,8 @@ public class BankOperation {
 			}
 			clerk1.doTransaction(transaction); // Now do the credit
 			// choose an account at random for debit operation
-			select = rand.nextInt(accounts.length);
-			amount = 30 + rand.nextInt(31); // Generate amount of $30 to $60
+			select = random.nextInt(accounts.length);
+			amount = 30 + random.nextInt(31); // Generate amount of $30 to $60
 			transaction = new Transaction(accounts[select], // Account
 					Transaction.DEBIT, // Debit transaction
 					amount); // of amount

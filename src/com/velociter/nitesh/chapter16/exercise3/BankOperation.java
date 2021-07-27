@@ -21,11 +21,11 @@ public class BankOperation {
 		clerk1Thread.start(); // Start the first
 		clerk2Thread.start();
 		// Generate transactions of each type and pass to the clerks
-		Random rand = new Random(); // Random number generator
+		Random random = new Random(); // Random number generator
 		Transaction transaction; // Stores a transaction
 		int amount = 0; // stores an amount of money
 		for (int i = 1; i <= transactionCount; i++) {
-			amount = 50 + rand.nextInt(26); // Generate amount of $50 to $75
+			amount = 50 + random.nextInt(26); // Generate amount of $50 to $75
 			transaction = new Transaction(account, // Account
 					Transaction.CREDIT, // Credit transaction
 					amount); // of amount
@@ -39,7 +39,7 @@ public class BankOperation {
 				}
 			}
 			clerk1.doTransaction(transaction); // Now do the credit
-			amount = 30 + rand.nextInt(31); // Generate amount of $30 to $60
+			amount = 30 + random.nextInt(31); // Generate amount of $30 to $60
 			transaction = new Transaction(account, // Account
 					Transaction.DEBIT, // Debit transaction
 					amount); // of amount
