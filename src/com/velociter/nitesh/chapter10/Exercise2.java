@@ -46,9 +46,9 @@ public class Exercise2 {
 
 		}
 		// create the object of fileWriter to store data to file.
-		FileWriter filewriter = new FileWriter("Date.txt");
+		FileWriter filewriter = new FileWriter("D:/Date.txt");
 		// add the resulting day, month, year.
-		String date = day + first + "," + monthString + "," + year;
+		String date = day + first + " " + monthString + " " + year;
 		// put the data into a file
 		for (j = 0; j < date.length(); j++) {
 			filewriter.write(date.charAt(j));

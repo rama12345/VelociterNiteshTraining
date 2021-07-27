@@ -45,9 +45,9 @@ public class Exercise3 {
 
 		}
 		// create the object of fileWriter to store data to file.
-		FileWriter filewriter = new FileWriter("Date1.txt");
+		FileWriter filewriter = new FileWriter("D:/Date1.txt");
 		// add the resulting day, month, year.
-		String firstFileDate = day + first + "," + monthOfString + "," + year;
+		String firstFileDate = day + first + " " + monthOfString + " " + year;
 		System.out.println("first file date is:" + firstFileDate);
 		// put the data into first file
 		for (j = 0; j < firstFileDate.length(); j++) { // j variable for iteration
@@ -56,7 +56,7 @@ public class Exercise3 {
 		filewriter.close();
 		System.out.println("Written in first file  sucessfully");
 		// creating a second file
-		FileWriter filewriterObject = new FileWriter("Date2.txt");
+		FileWriter filewriterObject = new FileWriter("D:/Date2.txt");
 		int convertedmonthStringIntoMonthNumber = 0;
 		for (int i = 0; i < monthNames.length; i++) // i for iteration
 		{

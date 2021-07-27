@@ -35,7 +35,7 @@ public class Exercise4 {
 			}
 		}
 		// create an object of fileWriter to write data into file.
-		FileWriter fileWriter = new FileWriter("Arrayindex.txt");
+		FileWriter fileWriter = new FileWriter("D:/Arrayindex.txt");
 		for (i = 0; i <= length; i++) {
 			fileWriter.write(arrayOfString[i] + " "); // written the content into the file
 		}
