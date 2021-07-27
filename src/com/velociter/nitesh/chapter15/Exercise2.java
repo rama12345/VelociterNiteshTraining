@@ -18,15 +18,15 @@ public class Exercise2 {
 		Stack<String> dealersCards = new Stack<String>();
 		// GENERATE DEALERS FIRST CARD
 		for (int i = 0; i <= 1; i++) {
-			int randomGenNumber = (int) (Math.random() * 13);
-			dealersCards.add(cards[randomGenNumber]);
+			int randomNumber = (int) (Math.random() * 13);
+			dealersCards.add(cards[randomNumber]);
 		}
 		// Print Dealers First Card
 		System.out.println("The Dealer Was Dealt: " + dealersCards);
 		// Deal Users Two Cards
 		for (int i = 0; i <= 1; i++) {
-			int randomGenNumber = (int) (Math.random() * 13);
-			usersCards.add(cards[randomGenNumber]);
+			int randomNumber = (int) (Math.random() * 13);
+			usersCards.add(cards[randomNumber]);
 		}
 		// Print Users Two Cards
 		System.out.println("The User Was Dealt: " + usersCards);
@@ -55,8 +55,8 @@ public class Exercise2 {
 				// WHILE Twisting = True Generate New Cards Check Value of Cards
 				// Bust/Twist/Stick For User
 				for (int i = 0; i <= 0; i++) {
-					int randomGenNumber = (int) (Math.random() * 13);
-					usersCards.add(cards[randomGenNumber]);
+					int randomNumber = (int) (Math.random() * 13);
+					usersCards.add(cards[randomNumber]);
 				}
 				System.out.println(usersCards + "\n");
 				// Generate Users Card Value
@@ -105,8 +105,8 @@ public class Exercise2 {
 				// Dealers Second Card && Check Dealers Value && Take Action
 				System.out.println("Dealing Dealers Second Card!");
 				for (int i = 0; i <= 0; i++) {
-					int randomGenNumber = (int) (Math.random() * 13);
-					dealersCards.add(cards[randomGenNumber]);
+					int randomNumber = (int) (Math.random() * 13);
+					dealersCards.add(cards[randomNumber]);
 				}
 				System.out.println(dealersCards + "\n");
 				// For Loop Generate Dealers Card Value
@@ -148,8 +148,8 @@ public class Exercise2 {
 					dealersValue = 0;
 					// If Dealers Value: <=16 == 17 < 17 == 21 > 21
 					if (dealersValue <= 16) {
-						int randomGenNumber = (int) (Math.random() * 13);
-						dealersCards.add(cards[randomGenNumber]);
+						int randomNumber = (int) (Math.random() * 13);
+						dealersCards.add(cards[randomNumber]);
 						System.out.println("Dealer Has Less Than 17 - Taking Another Card\n");
 						System.out.println("Dealers Cards: " + dealersCards);
 						dealersValue = 0;
