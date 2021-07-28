@@ -1,6 +1,6 @@
 package com.velociter.nitesh.chapter7;
 
-public class Exercise1 {
+public class GenerateExceptions {
 	public static void main(String args[]) {
 		String nameOfString = null;
 		// take the four digit into array
