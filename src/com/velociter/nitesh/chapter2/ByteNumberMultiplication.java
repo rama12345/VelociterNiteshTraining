@@ -1,6 +1,6 @@
 package com.velociter.nitesh.chapter2;
 
-public class Exercise1 {
+public class ByteNumberMultiplication {
 	public static void main(String args[]) {
 	      byte byteNumber = 1;
 	      System.out.println(2);
