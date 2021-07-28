@@ -1,7 +1,7 @@
 package com.velociter.nitesh.chapter4;
 
 
-public class Exercise3 {
+public class StringOperations {
 
 	public static void main(String[]args)
     {
@@ -24,7 +24,7 @@ public class Exercise3 {
             	words = "";
             }
         }
-        // get the initial word in smallwords and longwords
+        // get the initial word in small words and longwords
         smallWords = largeWords = arrayOfString[0];    
         for(i = 0; i < numberOfWords; i++){      
             if(smallWords.length() > arrayOfString[i].length())    
