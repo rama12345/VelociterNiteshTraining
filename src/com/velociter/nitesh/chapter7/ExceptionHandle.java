@@ -11,7 +11,7 @@ class IndexOutOfBoundsException {
 	}
 }
 
-public class Exercise2 {
+public class ExceptionHandle {
 	public static void main(String args[]) {
 		// creating the object of Index Out of Bounds Exception
 		IndexOutOfBoundsException indexOutOfBoundsException = new IndexOutOfBoundsException();
