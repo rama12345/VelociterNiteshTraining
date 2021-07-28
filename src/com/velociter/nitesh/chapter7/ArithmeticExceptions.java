@@ -5,7 +5,7 @@ class IteratedArithmeticException {
 	int result = 0;
 	int iteratedCount = 0;
 
-	public void iteratedExceptionOccures() throws ArithmeticException {
+	public void iteratedExceptionOccures() throws Exception {
 		// get the string into array from the end of length
 		for (int iteration = 0;; iteration++) {
 			// generate the divisor random value of 100 multiple
@@ -18,14 +18,14 @@ class IteratedArithmeticException {
 	}
 }
 
-public class Exercise3 {
+public class ArithmeticExceptions {
 	public static void main(String args[]) {
 		// creating the object of Iterated Arithmetic Exception
 		IteratedArithmeticException iteratedArithmeticException = new IteratedArithmeticException();
 		try {
 			// find out the exception of Iterated Arithmetic Exception
 			iteratedArithmeticException.iteratedExceptionOccures();
-		} catch (ArithmeticException e) {
+		} catch (Exception e) {
 			System.out.println("ArithmeticException Exception Occures:" + e.getMessage());
 		}
 	}
