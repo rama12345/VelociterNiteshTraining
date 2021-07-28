@@ -1,6 +1,6 @@
 package com.velociter.nitesh.chapter3;
 
-public class Exercise4 {
+public class RandomCharacter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
