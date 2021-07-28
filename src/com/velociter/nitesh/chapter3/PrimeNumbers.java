@@ -3,7 +3,6 @@ package com.velociter.nitesh.chapter3;
 public class PrimeNumbers {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// generate 100 multiple of random value
 		int number = (int) (100 * Math.random() + 1);
 		System.out.println("random number is : " + number);
