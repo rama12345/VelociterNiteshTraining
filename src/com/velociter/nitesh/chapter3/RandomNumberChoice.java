@@ -2,7 +2,6 @@ package com.velociter.nitesh.chapter3;
 
 public class RandomNumberChoice {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int myChoice = 0;
 		// get the random value of choice
 		myChoice = (int) (6.0 * Math.random());
