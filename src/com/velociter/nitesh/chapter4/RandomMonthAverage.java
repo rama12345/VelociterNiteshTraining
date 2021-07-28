@@ -1,10 +1,9 @@
 package com.velociter.nitesh.chapter4;
 
 
-public class Exercise1 {
+public class RandomMonthAverage {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// store 12 months in array of string
 		String[] months = { "January", "Febuary", "March", "April", "May", "June", "July", "August", "september",
 				"October", "November", "December" };
