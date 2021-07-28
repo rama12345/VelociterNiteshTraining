@@ -1,10 +1,10 @@
 package com.velociter.nitesh.chapter4;
 
-public class Exercise2 {
+public class Matrix {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[][] table = new int[12][12];
+		int n = 32;
+		int[][] table = new int[n][n];
 		// loop for rows from 1 to 12
 		for (int row = 0; row <= table.length - 1; row++) {
 			// loop for columns from 1 to 12
@@ -24,5 +24,4 @@ public class Exercise2 {
 			System.out.println(" ");
 		}
 	}
-
 }
