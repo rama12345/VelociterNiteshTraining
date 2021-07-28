@@ -1,6 +1,6 @@
 package com.velociter.nitesh.chapter4;
 
-public class Exercise5 {
+public class SquenceLetter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
