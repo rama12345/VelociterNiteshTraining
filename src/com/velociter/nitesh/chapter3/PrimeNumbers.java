@@ -1,18 +1,18 @@
 package com.velociter.nitesh.chapter3;
 
-public class Exercise2 {
+public class PrimeNumbers {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// generate 100 multiple of random value
-		int num = (int) (100 * Math.random() + 1);
-		System.out.println("random no is:" + num);
+		int number = (int) (100 * Math.random() + 1);
+		System.out.println("random number is : " + number);
 		// check the condition of prime number
-		if (num % 2 != 0) {
-			num = (int) Math.sqrt(num);
-			System.out.println("Prime no.square root is" + num);
+		if (number % 2 != 0) {
+			number = (int) Math.sqrt(number);
+			System.out.println("prime number Of square root is : " + number);
 		} else {
-			System.out.println(" its Not not prime No.square root" + num);
+			System.out.println("its Not not prime No.square root : " + number);
 		}
 	}
 }
