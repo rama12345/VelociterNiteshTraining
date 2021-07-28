@@ -102,46 +102,6 @@ public class Exercise2 {
 				}
 				break;
 			case 2:
-				// Dealers Second Card && Check Dealers Value && Take Action
-				System.out.println("Dealing Dealers Second Card!");
-				for (int i = 0; i <= 0; i++) {
-					int randomNumber = (int) (Math.random() * 13);
-					dealersCards.add(cards[randomNumber]);
-				}
-				System.out.println(dealersCards + "\n");
-				// For Loop Generate Dealers Card Value
-				dealersValue = 0;
-				for (int i = 0; i < dealersCards.size(); i++) {
-					if (dealersCards.get(i).equals("2")) {
-						dealersValue += 2;
-					} else if (dealersCards.get(i).equals("3")) {
-						dealersValue += 3;
-					} else if (dealersCards.get(i).equals("4")) {
-						dealersValue += 4;
-					} else if (dealersCards.get(i).equals("5")) {
-						dealersValue += 5;
-					} else if (dealersCards.get(i).equals("6")) {
-						dealersValue += 6;
-					} else if (dealersCards.get(i).equals("7")) {
-						dealersValue += 7;
-					} else if (dealersCards.get(i).equals("8")) {
-						dealersValue += 8;
-					} else if (dealersCards.get(i).equals("9")) {
-						dealersValue += 9;
-					} else if (dealersCards.get(i).equals("10")) {
-						dealersValue += 10;
-					} else if (dealersCards.get(i).equals("Jack")) {
-						dealersValue += 10;
-					} else if (dealersCards.get(i).equals("Queen")) {
-						dealersValue += 10;
-					} else if (dealersCards.get(i).equals("King")) {
-						dealersValue += 10;
-					} else if (dealersCards.get(i).equals("Ace")) {
-						dealersValue += 11;
-					}
-				}
-				// Print Dealers Value
-				System.out.println("Dealers Cards Value: " + dealersValue + "");
 				// Take Action On Dealers Value
 				int y = 0;
 				while (y == 0) {
