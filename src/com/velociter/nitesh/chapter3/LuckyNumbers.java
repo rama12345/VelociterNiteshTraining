@@ -3,7 +3,6 @@ package com.velociter.nitesh.chapter3;
 public class LuckyNumbers {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		    int setCount = 5;                                                  
 		    int setSize = 6;                                                   
 		    int range = 49;                                                    
