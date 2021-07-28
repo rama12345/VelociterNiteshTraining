@@ -3,7 +3,6 @@ package com.velociter.nitesh.chapter3;
 public class RandomCharacter {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		char characterInAlphabate = ' ', sequenceOfCharacter;
 		// loop is going to start from A-Z
 		for (sequenceOfCharacter = 'A'; sequenceOfCharacter <= 'Z'; sequenceOfCharacter++) {
