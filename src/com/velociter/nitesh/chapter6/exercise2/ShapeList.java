@@ -12,7 +12,7 @@ public class ShapeList {
 		}
 	}
 
-	// Construct a linked list from an array of objects
+	// Construct a shape list from an array of objects
 	public ShapeList(Object[] items) {
 		if (items != null) {
 			// Add the items to the list
