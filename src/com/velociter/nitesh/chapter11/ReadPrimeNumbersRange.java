@@ -10,7 +10,7 @@ import java.nio.LongBuffer;
 import java.nio.channels.FileChannel;
 import java.util.Scanner;
 
-public class Exercise3 {
+public class ReadPrimeNumbersRange {
 	public static void main(String[] args) throws IOException {
 		// create object of File to store files
 		File txtPrimesFile = new File("D:/primes.txt");
