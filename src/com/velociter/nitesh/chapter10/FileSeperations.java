@@ -3,7 +3,7 @@ package com.velociter.nitesh.chapter10;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Exercise1 {
+public class FileSeperations {
 	public static void main(String args[]) {
 		String dataStore;
 		try {
