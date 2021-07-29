@@ -6,19 +6,19 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
-class Person3 implements java.io.Serializable {
+class Person implements java.io.Serializable {
 	public int index;
 	public String name;
 
 	// constructor
-	public Person3(int index, String name) {
+	public Person(int index, String name) {
 		this.index = index;
 		this.name = name;
 	}
 
 }
 
-class Eercise3 {
+class SeperateFileIndex {
 	public static void main(String[] args) {
 		try {
 			String filename = "file.txt"; // file name
@@ -39,11 +39,10 @@ class Eercise3 {
 
 				System.out.println("Enter the Name:");
 				name[i] = scanner.nextLine();
-				Person3 personObject = new Person3(index[i], name[i]);// created a person class object
+				Person personObject = new Person(index[i], name[i]);// created a person class object
 				// Method for serialization of object
 				outputStreamObj.writeObject(personObject); // passing object of person class
 				personObject = null;
-
 			}
 			file.close();
 			outputStreamObj.close(); // closing the file
