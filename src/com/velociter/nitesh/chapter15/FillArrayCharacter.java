@@ -2,7 +2,7 @@ package com.velociter.nitesh.chapter15;
 
 import java.util.Arrays;
 
-public class Exercise1 {
+public class FillArrayCharacter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
