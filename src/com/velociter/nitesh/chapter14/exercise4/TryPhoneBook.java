@@ -24,6 +24,7 @@ public class TryPhoneBook {
 			case 1:
 				// add the user entry.
 				phoneBook.addEntry(BookEntry.readEntry());
+				System.out.println("Your Entry Has Been Done.......");
 				break;
 			case 2:
 				// get the user entry.
