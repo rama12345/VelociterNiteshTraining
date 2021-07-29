@@ -2,7 +2,7 @@ package com.velociter.nitesh.chapter8;
 
 import java.util.Random;
 
-public class Exercise4 {
+public class FormateRandomNumber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
