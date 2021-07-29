@@ -2,10 +2,9 @@ package com.velociter.nitesh.chapter8;
 
 import java.util.Random;
 
-public class Exercise3 {
+public class RandomNumberRange {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		double minValue = -50.0, maxValue = +50.0;
 		// create the object of generating random number
 		Random random = new Random();
