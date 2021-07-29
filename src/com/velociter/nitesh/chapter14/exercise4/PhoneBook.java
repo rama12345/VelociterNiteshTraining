@@ -20,7 +20,7 @@ public class PhoneBook implements Serializable {
 	public PhoneNumber getNumber(Person key) {
 		return getEntry(key).getNumber();
 	}
-	// creat an hasmap of person and book entry.
+	// create an hash map of person and book entry.
 	private HashMap<Person, BookEntry> phonebook = new HashMap<Person, BookEntry>();
 
 }
