@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Exercise4 {
+public class RemoveSpaces {
 	public static void main(String args[]) {
 		String textOfString = "My dog hasn’t got any nose.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n";
 		String lineOfString = null,regEx = " ";
