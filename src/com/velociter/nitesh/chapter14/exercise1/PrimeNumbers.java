@@ -3,7 +3,7 @@ package com.velociter.nitesh.chapter14.exercise1;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class Exercise1 {
+public class PrimeNumbers {
 	public static void main(String[] args) {
 		// creating and initialize a data member.
 		int startNumber, endNumber, i, j, count = 0;
