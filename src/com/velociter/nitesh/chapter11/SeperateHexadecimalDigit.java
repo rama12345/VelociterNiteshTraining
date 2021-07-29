@@ -3,7 +3,7 @@ package com.velociter.nitesh.chapter11;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class Exercise4 {
+public class SeperateHexadecimalDigit {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
