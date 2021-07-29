@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.ListIterator;
 
-public class Exercise2 {
+public class RandomHandCard {
 	public static void main(String[] args) {
 		String[] suits = { "C", "D", "H", "S" };
 		String[] cardValues = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
