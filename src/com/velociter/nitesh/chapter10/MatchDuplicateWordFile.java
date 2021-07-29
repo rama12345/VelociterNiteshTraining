@@ -3,7 +3,7 @@ package com.velociter.nitesh.chapter10;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Exercise4 {
+public class MatchDuplicateWordFile {
 	public static void main(String args[]) throws IOException {
 		String textOfString = "the fact cat ", word = "";
 		String arrayOfString[] = new String[14];
