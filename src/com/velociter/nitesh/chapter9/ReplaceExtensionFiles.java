@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Exercise2 {
+public class ReplaceExtensionFiles {
 	public static boolean renameFileExtension(String source, String newExtension) {
 		String target;
 		// get the extension to new created string
