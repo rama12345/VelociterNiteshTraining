@@ -29,7 +29,7 @@ class FileListFilter implements FilenameFilter {
 	}
 }
 
-public class Exercise3 {
+public class Directories {
 	public static void main(String args[]) {
 		// fetch the root directory of file
 		File[] roots = File.listRoots();
