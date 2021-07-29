@@ -2,7 +2,7 @@ package com.velociter.nitesh.chapter15;
 
 import java.util.Scanner;
 
-public class Exercise3 {
+public class ZodiacSign {
 
 	public static void main(String[] agrs) {
 		int month, day;
