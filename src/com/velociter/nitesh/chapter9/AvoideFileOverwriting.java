@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-public class Exercise1 {
+public class AvoideFileOverwriting {
 	public static void main(String[] args) {
 		// get the name of file from command line argument
 		if (null != args[0] && args[0].length() > 5 && args[0].endsWith(".txt")) {
