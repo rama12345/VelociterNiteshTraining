@@ -7,13 +7,13 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
-class Person4 implements java.io.Serializable {
+class Person implements java.io.Serializable {
 	public int index;
 	public String name;
 	public String address;
 
 	// Default constructor
-	public Person4(int index, String name, String address) {
+	public Person(int index, String name, String address) {
 		this.index = index;
 		this.name = name;
 		this.address = address;
@@ -21,7 +21,7 @@ class Person4 implements java.io.Serializable {
 
 }
 
-class Exercise4
+class RandomAccessFile
 
 {
 	public static void main(String[] args) {
@@ -52,7 +52,7 @@ class Exercise4
 				address[i] = scanner.nextLine();
 
 				// creating an object of person class and passing the arguments in constructor
-				Person4 personObject = new Person4(index[i], name[i], address[i]);
+				Person personObject = new Person(index[i], name[i], address[i]);
 				// Method for serialization of object
 				outputStreamObj.writeObject(personObject);
 				personObject = null;
@@ -66,13 +66,13 @@ class Exercise4
 
 		}
 		// doing deserializing
-		Person4 personObject1 = null;
+		Person personObject1 = null;
 		try {
 			FileInputStream file = new FileInputStream(filename);
 			ObjectInputStream inputStreamObj = new ObjectInputStream(file);
 			for (int i = 0; i < inputSize; i++) {
 				// Method for deserialization of object
-				personObject1 = (Person4) inputStreamObj.readObject();
+				personObject1 = (Person) inputStreamObj.readObject();
 
 				System.out.println("Object has been deserialized ");
 				System.out.println("Index = " + personObject1.index);
