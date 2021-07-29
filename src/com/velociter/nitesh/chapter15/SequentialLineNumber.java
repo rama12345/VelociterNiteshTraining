@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Exercise5 {
+public class SequentialLineNumber {
 	public static void main(String args[]) {
 		String textOfString = "My dog hasn’t got any nose.\n" + "How does your dog smell then?\n"
 				+ "My dog smells horrible.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n"
