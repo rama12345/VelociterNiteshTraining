@@ -3,7 +3,7 @@ package com.velociter.nitesh.chapter8;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public class Exercise2 {
+public class DelimeterSeperations {
 
 	public static void main(String[] args) {
 		String textOfString, words = "", arraOfString[] = new String[50];
@@ -33,6 +33,6 @@ public class Exercise2 {
 		}
 		// store the string into array of string
 		for (i = 0; i < numberOfWords; i++)
-			System.out.print(arraOfString[i] + "");
+			System.out.print(arraOfString[i] + " ");
 	}
 }
