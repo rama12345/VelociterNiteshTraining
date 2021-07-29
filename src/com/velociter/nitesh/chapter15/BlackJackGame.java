@@ -3,7 +3,7 @@ package com.velociter.nitesh.chapter15;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Exercise2 {
+public class BlackJackGame {
 	public static void main(String[] args) {
 		// Scanner && User Variables
 		Scanner input = new Scanner(System.in);
