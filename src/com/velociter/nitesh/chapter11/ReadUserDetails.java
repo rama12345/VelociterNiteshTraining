@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Exercise5 {
+public class ReadUserDetails {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		// initialize all the fields with null.
