@@ -13,6 +13,7 @@ class PhoneNumber implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String areacode;
 	private String number;
+
 	// constructor with parameter
 	public PhoneNumber(String areacode, String number) {
 		this.areacode = areacode;
@@ -42,6 +43,7 @@ class PhoneNumber implements Serializable {
 		}
 		return new PhoneNumber(area, localcode);
 	}
+
 	// store user input to buffer.
 	private static BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 }

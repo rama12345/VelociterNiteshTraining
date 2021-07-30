@@ -2,6 +2,7 @@ package com.velociter.nitesh.chapter6.exercise1;
 
 public class CircleImpl extends ShapeFactory {
 	double areaOfCircle,radius;
+	
 	//create constructor Of Circle
 	public CircleImpl(double areaOfCircle, double radius) {
 		super();
@@ -11,13 +12,11 @@ public class CircleImpl extends ShapeFactory {
 	
 	@Override
 	public void area() {
-		// TODO Auto-generated method stub
 		areaOfCircle=(22*radius*radius)/7;
 	}
 
 	@Override
 	public void volume() {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
@@ -27,13 +26,11 @@ public class CircleImpl extends ShapeFactory {
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
 		// show the result of area
 		System.out.println("Area Of Circle : "+areaOfCircle);
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		CircleImpl circle = new CircleImpl(15,5);
 		circle.area();
 		circle.show();

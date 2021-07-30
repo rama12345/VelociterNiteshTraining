@@ -3,7 +3,9 @@ package com.velociter.nitesh.chapter16.exercise1;
 public class Bank {
 	// Perform a transaction
 	public void doTransaction(Transaction transaction) {
-		int balance = transaction.getAccount().getBalance(); // Get current balance
+
+		// Get current balance
+		int balance = transaction.getAccount().getBalance();
 		switch (transaction.getTransactionType()) {
 		case Transaction.CREDIT:
 			// Credits require a lot of checks...
@@ -21,9 +23,11 @@ public class Bank {
 			} catch (InterruptedException e) {
 				System.out.println(e);
 			}
-			balance -= transaction.getAmount(); // Decrement the balance
+			// Decrement the balance
+			balance -= transaction.getAmount();
 			break;
-		default: // We should never get here
+		default:
+			// We should never get here
 			System.out.println("Invalid transaction");
 			System.exit(1);
 		}

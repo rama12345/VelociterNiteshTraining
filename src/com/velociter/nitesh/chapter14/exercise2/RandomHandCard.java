@@ -34,6 +34,7 @@ public class RandomHandCard {
 				new StringBuffer("Hand 4:") };
 		ListIterator<String> cards = shuffledDeck.listIterator();
 
+		// while to store the hand of card
 		while (cards.hasNext()) {
 			for (StringBuffer hand : hands) {
 				hand.append(' ').append(cards.next());

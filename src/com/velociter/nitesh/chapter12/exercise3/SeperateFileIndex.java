@@ -10,7 +10,7 @@ class Person implements java.io.Serializable {
 	public int index;
 	public String name;
 
-	// constructor
+	// constructor with parameter
 	public Person(int index, String name) {
 		this.index = index;
 		this.name = name;
@@ -40,6 +40,7 @@ class SeperateFileIndex {
 				System.out.println("Enter the Name:");
 				name[i] = scanner.nextLine();
 				Person personObject = new Person(index[i], name[i]);// created a person class object
+				
 				// Method for serialization of object
 				outputStreamObj.writeObject(personObject); // passing object of person class
 				personObject = null;

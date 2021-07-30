@@ -1,13 +1,16 @@
 package com.velociter.nitesh.chapter6.exercise2;
 
 public class PolyLine {
+	
 	// Construct a polyline from an array of coordinate pairs
 	public PolyLine(double[][] coordinates) {
 		Point[] points = new Point[coordinates.length]; // Array to hold points
+	
 		// Create points from the coordinates
 		for (int i = 0; i < coordinates.length; i++) {
 			points[i] = new Point(coordinates[i][0], coordinates[i][1]);
 		}
+		
 		// Create the polyline from the array of points
 		polyline = new ShapeList(points);
 	}

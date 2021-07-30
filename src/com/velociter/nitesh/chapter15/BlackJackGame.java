@@ -8,14 +8,18 @@ public class BlackJackGame {
 		// Scanner && User Variables
 		Scanner input = new Scanner(System.in);
 		int usersDecision = 0;
+
 		// Users && Dealers Value Variables
 		int usersValue = 0;
 		int dealersValue = 0;
+
 		// Suit && Rank Arrays
 		String[] cards = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
+
 		// Array Lists Users Cards && Dealers Cards
 		Stack<String> usersCards = new Stack<String>();
 		Stack<String> dealersCards = new Stack<String>();
+
 		// GENERATE DEALERS FIRST CARD
 		for (int i = 0; i <= 1; i++) {
 			int randomNumber = (int) (Math.random() * 13);
@@ -23,6 +27,7 @@ public class BlackJackGame {
 		}
 		// Print Dealers First Card
 		System.out.println("The Dealer Was Dealt: " + dealersCards);
+
 		// Deal Users Two Cards
 		for (int i = 0; i <= 1; i++) {
 			int randomNumber = (int) (Math.random() * 13);
@@ -30,6 +35,7 @@ public class BlackJackGame {
 		}
 		// Print Users Two Cards
 		System.out.println("The User Was Dealt: " + usersCards);
+
 		// Check For BlackJack
 		if (usersCards.contains("Ace")) {
 			if (usersCards.contains("King") || usersCards.contains("Queen") || usersCards.contains("Jack")
@@ -52,6 +58,7 @@ public class BlackJackGame {
 				System.out.println("You've Twisted - Your Cards: " + usersCards);
 				System.out.println("You've Twisted - Additional Card Dealt");
 				x = 0;
+
 				// WHILE Twisting = True Generate New Cards Check Value of Cards
 				// Bust/Twist/Stick For User
 				for (int i = 0; i <= 0; i++) {
@@ -59,6 +66,7 @@ public class BlackJackGame {
 					usersCards.add(cards[randomNumber]);
 				}
 				System.out.println(usersCards + "\n");
+
 				// Generate Users Card Value
 				usersValue = 0;
 				for (int i = 0; i < usersCards.size(); i++) {
@@ -106,6 +114,7 @@ public class BlackJackGame {
 				int y = 0;
 				while (y == 0) {
 					dealersValue = 0;
+
 					// If Dealers Value: <=16 == 17 < 17 == 21 > 21
 					if (dealersValue <= 16) {
 						int randomNumber = (int) (Math.random() * 13);
@@ -149,6 +158,7 @@ public class BlackJackGame {
 						System.out.println("Dealer Has 17 - Dealer Sticks\n");
 						y = 1;
 
+						// check the userValue is less 17 then userLost
 						if (usersValue < 17) {
 							System.out.println("You Have: " + usersValue + " You Lost");
 						} else if (usersValue == dealersValue) {
@@ -157,6 +167,7 @@ public class BlackJackGame {
 							System.out.println("You Have: " + usersValue + " You Won!");
 						}
 					}
+					// check the dealerValue is great 17 and Less 21 then dealer Stuck
 					if (dealersValue > 17 && dealersValue < 21) {
 						System.out.println("Dealer Has: " + dealersValue + " Dealer Sticks\n");
 						y = 1;

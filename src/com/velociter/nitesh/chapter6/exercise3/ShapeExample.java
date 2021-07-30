@@ -1,6 +1,7 @@
 package com.velociter.nitesh.chapter6.exercise3;
 
 interface Shape {
+	
 	// abstract method
 	void draw();
 

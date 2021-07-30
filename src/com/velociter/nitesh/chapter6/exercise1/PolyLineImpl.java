@@ -49,21 +49,19 @@ public class PolyLineImpl extends ShapeFactory{
 
 	private ListPoint start; // First ListPoint in the list
 	private ListPoint end; // Last ListPoint in the list
+	
 	@Override
 	public void area() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void volume() {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
 		
 	}
 }

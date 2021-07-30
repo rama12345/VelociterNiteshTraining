@@ -21,9 +21,7 @@ class Person implements java.io.Serializable {
 
 }
 
-class RandomAccessFile
-
-{
+class RandomAccessFile {
 	public static void main(String[] args) {
 		String filename = "index.txt";
 		Scanner scanner = new Scanner(System.in); // taking a input from user
@@ -53,6 +51,7 @@ class RandomAccessFile
 
 				// creating an object of person class and passing the arguments in constructor
 				Person personObject = new Person(index[i], name[i], address[i]);
+
 				// Method for serialization of object
 				outputStreamObj.writeObject(personObject);
 				personObject = null;
@@ -71,6 +70,7 @@ class RandomAccessFile
 			FileInputStream file = new FileInputStream(filename);
 			ObjectInputStream inputStreamObj = new ObjectInputStream(file);
 			for (int i = 0; i < inputSize; i++) {
+
 				// Method for deserialization of object
 				personObject1 = (Person) inputStreamObj.readObject();
 

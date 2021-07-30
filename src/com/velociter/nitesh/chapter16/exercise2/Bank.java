@@ -12,7 +12,8 @@ public class Bank {
 			} catch (InterruptedException e) {
 				System.out.println(e);
 			}
-			balance += transaction.getAmount(); // Increment the balance
+			// Increment the balance
+			balance += transaction.getAmount(); 
 			break;
 		case Transaction.DEBIT:
 			// Debits require even more checks...
@@ -21,9 +22,11 @@ public class Bank {
 			} catch (InterruptedException e) {
 				System.out.println(e);
 			}
-			balance -= transaction.getAmount(); // Decrement the balance
+			// Decrement the balance
+			balance -= transaction.getAmount(); 
 			break;
-		default: // We should never get here
+		default: 
+			// We should never get here
 			System.out.println("Invalid transaction");
 			System.exit(1);
 		}

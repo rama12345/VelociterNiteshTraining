@@ -3,13 +3,13 @@ package com.velociter.nitesh.chapter5.exercise2;
 public class TestLengths {
 
 	public static void main(String args[]) {
-		mcmLength[] lengths = new mcmLength[4];
+		McmLength[] lengths = new McmLength[4];
 
 		// Test the constructors:
-		lengths[0] = new mcmLength(274.65);
-		lengths[1] = new mcmLength(274);
-		lengths[2] = new mcmLength(274, 2, 3);
-		lengths[3] = new mcmLength();
+		lengths[0] = new McmLength(274.65);
+		lengths[1] = new McmLength(274);
+		lengths[2] = new McmLength(274, 2, 3);
+		lengths[3] = new McmLength();
 
 		// Display the figures:
 		for (int i = 0; i < lengths.length; ++i) {
@@ -18,12 +18,10 @@ public class TestLengths {
 
 		// Test the arithmetic and area operations
 		System.out.println("Addition: " + lengths[0] + " plus " + lengths[1] + " is " + lengths[0].add(lengths[1]));
-		System.out.println(
-				"Subtraction: " + lengths[0] + " minus " + lengths[1] + " is " + lengths[0].subtract(lengths[1]));
+		System.out.println("Subtraction: " + lengths[0] + " minus " + lengths[1] + " is " + lengths[0].subtract(lengths[1]));
 		System.out.println("Multiplication: " + lengths[0] + " times 10 is " + lengths[0].multiply(10));
 		System.out.println("Division: " + lengths[0] + " divided by 10 is " + lengths[0].divide(10));
-		System.out.println(
-				"Area: " + lengths[0] + " by " + lengths[1] + " is " + lengths[0].area(lengths[1]) + " square mm");
+		System.out.println("Area: " + lengths[0] + " by " + lengths[1] + " is " + lengths[0].area(lengths[1]) + " square mm");
 
 		// Test comparison methods
 		if (lengths[0].greaterThan(lengths[1])) {

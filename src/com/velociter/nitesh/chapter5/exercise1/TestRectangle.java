@@ -8,7 +8,7 @@ public class TestRectangle {
 		// Initialize the rectangles as arbitrary sizes and at arbitrary positions:
 		for (int i = 0; i < rectangles.length; ++i) {
 			rectangles[i] = new Rectangle(Math.random() * 100, Math.random() * 100, Math.random() * 100,
-					Math.random() * 100);
+										Math.random() * 100);
 			System.out.print("Coords of rectangle " + i + " are: ");
 			System.out.println(rectangles[i]);
 		}

@@ -6,12 +6,16 @@ import java.io.FileOutputStream;
 
 public class AvoideFileOverwriting {
 	public static void main(String[] args) {
+
 		// get the name of file from command line argument
 		if (null != args[0] && args[0].length() > 5 && args[0].endsWith(".txt")) {
+
 			// store file name into Object of File
 			File txtFile = new File(args[0]);
+
 			// create and writing data of file.
 			FileOutputStream outputFile = null;
+
 			// check the condition of file is exist or not
 			if (txtFile.isFile()) {
 				System.out.println("file.txt already exists.");

@@ -33,5 +33,5 @@ public class Clerk implements Runnable {
 	}
 
 	private Bank theBank; // The employer - an electronic marvel
-	private Transaction initiallyTransaction ; // The in-tray holding a transaction
+	private Transaction initiallyTransaction; // The in-tray holding a transaction
 }

@@ -3,6 +3,7 @@ package com.velociter.nitesh.chapter6.exercise2;
 public class Point {
 	private final double x;
 	private final double y;
+	
 	// constructor of point
 	public Point(double x, double y) {
 		this.x = x;

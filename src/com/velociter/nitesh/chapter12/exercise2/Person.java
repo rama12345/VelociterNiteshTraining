@@ -21,6 +21,7 @@ public class Person implements Serializable {
 		List<String> list2 = new ArrayList<String>();
 		list2.add("USA");
 		list2.add("CA");
+		
 		// using addAll( ) method to concatenate the lists
 		List<String> concatenated_list = new ArrayList<String>();
 		concatenated_list.addAll(list1);

@@ -3,13 +3,13 @@ package com.velociter.nitesh.chapter5.exercise3;
 public class TestWeights {
 
 	public static void main(String args[]) {
-		tkgWeight[] lengths = new tkgWeight[4];
+		TkgWeight[] lengths = new TkgWeight[4];
 
 		// Test the constructors:
-		lengths[0] = new tkgWeight(274.65);
-		lengths[1] = new tkgWeight(274);
-		lengths[2] = new tkgWeight(274, 2, 3);
-		lengths[3] = new tkgWeight();
+		lengths[0] = new TkgWeight(274.65);
+		lengths[1] = new TkgWeight(274);
+		lengths[2] = new TkgWeight(274, 2, 3);
+		lengths[3] = new TkgWeight();
 
 		// Display the figures:
 		for (int i = 0; i < lengths.length; ++i) {
@@ -18,12 +18,10 @@ public class TestWeights {
 
 		// Test the arithmetic and area operations
 		System.out.println("Addition: " + lengths[0] + " plus " + lengths[1] + " is " + lengths[0].add(lengths[1]));
-		System.out.println(
-				"Subtraction: " + lengths[0] + " minus " + lengths[1] + " is " + lengths[0].subtract(lengths[1]));
+		System.out.println("Subtraction: " + lengths[0] + " minus " + lengths[1] + " is " + lengths[0].subtract(lengths[1]));
 		System.out.println("Multiplication: " + lengths[0] + " times 10 is " + lengths[0].multiply(10));
 		System.out.println("Division: " + lengths[0] + " divided by 10 is " + lengths[0].divide(10));
-		System.out.println(
-				"Area: " + lengths[0] + " by " + lengths[1] + " is " + lengths[0].area(lengths[1]) + " square gm");
+		System.out.println("Area: " + lengths[0] + " by " + lengths[1] + " is " + lengths[0].area(lengths[1]) + " square gm");
 
 		// Test comparison methods
 		if (lengths[0].greaterThan(lengths[1])) {

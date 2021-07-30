@@ -16,14 +16,11 @@ class FileListFilter implements FilenameFilter {
 
 	// create function of check directory will exist or not
 	public boolean accept(File directory, String filename) {
-		boolean fileOK = true;
-
-		if (name != null) {
+		boolean fileOK = false;
+		if (name != null || extension != null) {
 			fileOK &= filename.startsWith(name);
-		}
-
-		if (extension != null) {
 			fileOK &= filename.endsWith('.' + extension);
+			return fileOK = true;
 		}
 		return fileOK;
 	}
@@ -31,24 +28,30 @@ class FileListFilter implements FilenameFilter {
 
 public class Directories {
 	public static void main(String args[]) {
+		
 		// fetch the root directory of file
 		File[] roots = File.listRoots();
+		
 		// for each loop of root files
 		for (File root : roots) {
-			System.out.println(root);
+		
+			// System.out.println(root);
 			// Create an object that is a directory
-			File myDirectory = new File("C:/jdk1.5.0/src/java");
+			File myDirectory = new File("D:\\VelocitersChapters\\VelociterNiteshTraining\\src\\com\\velociter\\nitesh");
+			
 			// filtering the files from root folder
-			FilenameFilter fileFilter = new FileListFilter("F", "java");
-			// pass filted file from root
+			FilenameFilter fileFilter = new FileListFilter("D:/","D:\\VelocitersChapters\\VelociterNiteshTraining\\src\\com\\velociter\\nitesh");
+			
+			// pass filed file from root
 			File[] contents = myDirectory.listFiles(fileFilter);
-			// check the condition of filted file into list of files
+			
+			// check the condition of felted file into list of files
 			if (contents != null) {
 				System.out.println("\nThe " + contents.length + " matching items in the directory, "
-						+ myDirectory.getName() + ", are:");
+											+ myDirectory.getName() + ", are:");
 				for (File file : contents) {
 					System.out.println(file + " is a " + (file.isDirectory() ? "directory" : "file")
-							+ " last modified on\n" + new Date(file.lastModified()));
+											+ " last modified on\n" + new Date(file.lastModified()));
 				}
 			} else {
 				System.out.println(myDirectory.getName() + " is not a directory");

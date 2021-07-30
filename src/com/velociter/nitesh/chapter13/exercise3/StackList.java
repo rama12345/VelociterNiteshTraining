@@ -6,8 +6,10 @@ import java.util.ArrayList;
 class StackList<T extends Serializable> implements Serializable {
 	// Empty array list
 	ArrayList<T> arrayList;
+	
 	// Default value of top variable when stack is empty
 	int top = -1;
+	
 	// Variable to store size of array
 	int size;
 
@@ -16,6 +18,7 @@ class StackList<T extends Serializable> implements Serializable {
 	StackList(int size) {
 		// Storing the value of size into global variable
 		this.size = size;
+	
 		// Creating array of Size = size
 		this.arrayList = new ArrayList<T>(size);
 	}
@@ -31,6 +34,7 @@ class StackList<T extends Serializable> implements Serializable {
 		} else {
 			// Increment top to go to next position
 			top = top + 1;
+		
 			// Over-writing existing element
 			if (arrayList.size() > top)
 				arrayList.set(top, X);

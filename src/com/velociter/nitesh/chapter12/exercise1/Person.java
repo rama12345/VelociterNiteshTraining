@@ -10,9 +10,11 @@ public class Person implements Serializable {// implements serializable to write
 	// create function to get the name and address from user.
 	public void setDetails() {
 		Scanner input = new Scanner(System.in);
+		
 		// get the name from user.
 		System.out.println("Enter the name : ");
 		name = input.nextLine();
+		
 		// get the address from user.
 		System.out.println("Enter the address : ");
 		address = input.nextLine();

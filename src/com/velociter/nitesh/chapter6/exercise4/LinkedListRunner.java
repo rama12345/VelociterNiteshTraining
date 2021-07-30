@@ -10,14 +10,20 @@ public class LinkedListRunner {
 	    int numberOfInput = input.nextInt();
 	    System.out.println("Enter the integer data in linklist");
 	    int InputOfNodes = input.nextInt();
+	    
+	    // create an node object to pass integer data
 	    Node head = new Node(InputOfNodes);
 	    list.addToTheLast(head);// add head to linkedlist
 	    for (int i = 1; i < numberOfInput; i++) {  //add remaining nodes
 	      int ValuesOfNodes = input.nextInt();
-	      list.addToTheLast(new Node(ValuesOfNodes));
+	      list.addToTheLast(new Node(ValuesOfNodes)); // add the node to the list
 	    }
+	    
+	    // before reversing the node look like.
 	    System.out.println("Before reversing"); 
 	    list.printlist(head);
+	    
+	    // after reversing the node look like.
 	    Node head2 = null;
 	    System.out.println("After reversing");
 	    head2 = list.reverse(head);

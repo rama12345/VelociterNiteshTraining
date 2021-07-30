@@ -7,13 +7,14 @@ import java.util.Scanner;
 public class PhoneDirectory {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// creating HashMap object of type <String, String>
 		Map<Integer, String> hashMap = new HashMap<Integer, String>();
+		
 		// get the key from user.
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the Number Between(10-20) : ");
 		int keyNumber = input.nextInt();
+		
 		// adding key-value pairs to HashMap object
 		hashMap.put(10, "abhishek");
 		hashMap.put(11, "ajith");
@@ -26,8 +27,10 @@ public class PhoneDirectory {
 		hashMap.put(18, "jeky");
 		hashMap.put(19, "stev");
 		hashMap.put(20, "methu");
+		
 		// check the condition it will be contain entered key.
 		if (hashMap.containsKey(keyNumber)) {
+		
 			// store key to Object of value
 			Object value = hashMap.get(keyNumber);
 			System.out.println("Key : " + keyNumber + "\t" + "Value : " + value);

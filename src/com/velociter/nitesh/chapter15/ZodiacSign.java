@@ -6,18 +6,21 @@ public class ZodiacSign {
 
 	public static void main(String[] agrs) {
 		int month, day;
+
 		// get the month and day from user.
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter your birth month(1-12) : \n");
 		month = input.nextInt();
 		System.out.println("Enter your birth day : \n");
 		day = input.nextInt();
+
 		// call the function to find the Zodiac Sign pass month and day from user.
 		zodiac_sign(month, day);
 	}
 
 	// method for check Zodiac Sign for Given Date of Birth
 	static void zodiac_sign(int month, int day) {
+
 		// check the condition if month or day.
 		if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
 			System.out.println("Your Zodiac Sign based on your Birth date is Capricorn");

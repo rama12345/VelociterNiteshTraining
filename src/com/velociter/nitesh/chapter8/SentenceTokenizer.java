@@ -9,8 +9,10 @@ public class SentenceTokenizer {
 		String textOfString;
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the Sentence : ");
+		
 		// take the input from user
 		textOfString = input.nextLine();
+		
 		// separation of string from , using string tokenizer
 		StringTokenizer stringTokens = new StringTokenizer(textOfString, ",");
 		while (stringTokens.hasMoreTokens()) {

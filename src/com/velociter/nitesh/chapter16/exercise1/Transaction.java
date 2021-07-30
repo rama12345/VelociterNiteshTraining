@@ -12,7 +12,7 @@ public class Transaction {
 		this.transactionType = transactionType;
 		this.amount = amount;
 	}
-
+	
 	public Account getAccount() {
 		return account;
 	}

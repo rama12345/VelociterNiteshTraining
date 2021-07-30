@@ -1,6 +1,7 @@
 package com.velociter.nitesh.chapter6.exercise2;
 
 public class ShapeList {
+
 	// Default constructor – creates an empty list
 	public ShapeList() {
 	}

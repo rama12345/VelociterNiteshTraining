@@ -8,14 +8,18 @@ public class Bank {
 			synchronized (transaction.getAccount()) {
 				// Get current balance
 				int balance = transaction.getAccount().getBalance();
+				
 				// Credits require require a lot of checks...
 				try {
 					Thread.sleep(100);
 				} catch (InterruptedException e) {
 					System.out.println(e);
 				}
-				balance += transaction.getAmount(); // Increment the balance
-				transaction.getAccount().setBalance(balance); // Restore account balance
+				// Increment the balance
+				balance += transaction.getAmount(); 
+				
+				// Restore account balance
+				transaction.getAccount().setBalance(balance); 
 				break;
 			}
 		case Transaction.DEBIT:
@@ -28,8 +32,11 @@ public class Bank {
 				} catch (InterruptedException e) {
 					System.out.println(e);
 				}
-				balance -= transaction.getAmount(); // Increment the balance...
-				transaction.getAccount().setBalance(balance);// Restore account balance
+				// Increment the balance...
+				balance -= transaction.getAmount(); 
+				
+				// Restore account balance
+				transaction.getAccount().setBalance(balance);
 				break;
 			}
 		default: // We should never get here

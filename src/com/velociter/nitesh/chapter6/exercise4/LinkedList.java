@@ -2,13 +2,12 @@ package com.velociter.nitesh.chapter6.exercise4;
 
 public class LinkedList {
 	Node head;
-	
+
 	// function to insert the data
 	public void insert(int data) {
 		Node node = new Node();
 		node.data = data;
 		node.next = null;
-
 		if (head == null) {
 			head = node;
 		} else {
@@ -19,7 +18,7 @@ public class LinkedList {
 			n.next = node;
 		}
 	}
-	
+
 	// to delete the data from list
 	public void delete(int index) {
 		if (index == 0) {
@@ -39,14 +38,13 @@ public class LinkedList {
 	// print the list of data
 	public void show() {
 		Node node = head;
-
 		while (node.next != null) {
 			System.out.print(node.data + "-> ");
 			node = node.next;
 		}
 		System.out.println(node.data);
 	}
-	
+
 	// insert the value at the start
 	public void insertAtStart(int data) {
 		Node node = new Node();
@@ -60,7 +58,6 @@ public class LinkedList {
 		Node node = new Node();
 		node.data = data;
 		node.next = head;
-
 		Node n = head;
 		for (int i = 0; i < index - 1; i++) {
 			n = n.next;
@@ -70,24 +67,18 @@ public class LinkedList {
 	}
 
 	// function to print the LinkedList
-	public void printlist(Node head) 
-	{
+	public void printlist(Node head) {
 		Node temp = head;
-
 		System.out.print("Head-> ");
-
 		while (temp != null) {
-
 			System.out.print(temp.data + "-> ");
 			temp = temp.next;
 		}
-
 		System.out.println("NULL");
 	}
 
 	// add new node at the end of the LinkedList
-	public void addToTheLast(Node node) 
-	{
+	public void addToTheLast(Node node) {
 		if (head == null)
 			head = node;
 		else {
@@ -100,8 +91,7 @@ public class LinkedList {
 	}
 
 	// reverse function
-	Node reverse(Node head) 
-	{
+	Node reverse(Node head) {
 		Node temp = head, prev = null, n = head.next;
 		while (n != null) {
 			temp.next = prev; // changing link of node

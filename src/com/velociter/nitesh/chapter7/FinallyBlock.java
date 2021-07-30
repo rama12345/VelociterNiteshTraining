@@ -6,10 +6,13 @@ class ArithmeticExceptionExample {
 	int iteratedCount = 0;
 
 	public void iteratedExceptionOccures() throws Exception {
+		
 		// get the string into array from the end of length
 		for (int iteration = 0;; iteration++) {
+		
 			// generate the divisor random value of 100 multiple
 			divisor = (int) (100 * Math.random());
+			
 			// find out the digit extraction and iteration count
 			result = 1000 / divisor;
 			iteratedCount++;
@@ -19,6 +22,7 @@ class ArithmeticExceptionExample {
 
 public class FinallyBlock {
 	public static void main(String args[]) {
+		
 		// creating the object of Arithmetic Exception Example
 		ArithmeticExceptionExample arithmeticExceptionExample = new ArithmeticExceptionExample();
 		try {

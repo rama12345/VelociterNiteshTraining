@@ -1,6 +1,6 @@
 package com.velociter.nitesh.chapter5.exercise3;
 
-public class tkgWeight {
+public class TkgWeight {
 	public static final double TON_PER_KILOGRAM = 0.00098421;
 	public static final int GRAM_PER_TON = 1016;
 	public static final int TON_PER_GRAM = 1000;
@@ -11,7 +11,7 @@ public class tkgWeight {
 	private int gram = 0;
 
 	// Constructors:
-	public tkgWeight(double kilogram) {
+	public TkgWeight(double kilogram) {
 		this((int) Math.round(kilogram * GRAM_PER_TON));
 	}
 
@@ -20,17 +20,17 @@ public class tkgWeight {
 	// values passed as arguments are not valid.
 	// With the approach here we guarantee all values are valid
 	// in the object that is created.
-	public tkgWeight(int gram) {
+	public TkgWeight(int gram) {
 		ton = gram / TON_PER_GRAM;
 		kilograme = (gram - ton * TON_PER_GRAM) / GRAM_PER_TON;
 		gram = gram - ton * TON_PER_GRAM - kilograme * GRAM_PER_TON;
 	}
 
-	public tkgWeight(int ton, int kilogram, int gram) {
+	public TkgWeight(int ton, int kilogram, int gram) {
 		this(ton * TON_PER_GRAM + kilogram * GRAM_PER_TON + gram);
 	}
 
-	public tkgWeight() {
+	public TkgWeight() {
 	}
 
 	// Methods
@@ -48,24 +48,24 @@ public class tkgWeight {
 	}
 
 	// All of the following methods use the toMM():
-	public tkgWeight add(tkgWeight length) {
-		return new tkgWeight(toGram() + length.toGram());
+	public TkgWeight add(TkgWeight length) {
+		return new TkgWeight(toGram() + length.toGram());
 	}
 
-	public tkgWeight subtract(tkgWeight length) {
-		return new tkgWeight(toGram() - length.toGram());
+	public TkgWeight subtract(TkgWeight length) {
+		return new TkgWeight(toGram() - length.toGram());
 	}
 
-	public tkgWeight multiply(int n) {
-		return new tkgWeight(n * toGram());
+	public TkgWeight multiply(int n) {
+		return new TkgWeight(n * toGram());
 	}
 
-	public tkgWeight divide(int y) {
-		return new tkgWeight(toGram() / y);
+	public TkgWeight divide(int y) {
+		return new TkgWeight(toGram() / y);
 	}
 
 	// Calculate area in square gm
-	public long area(tkgWeight length) {
+	public long area(TkgWeight length) {
 		return (toGram() * length.toGram());
 	}
 
@@ -73,19 +73,19 @@ public class tkgWeight {
 	// Return value is 1 if current greater than arg
 	// 0 if current equal to arg
 	// -1 if current less than arg
-	public int compare(tkgWeight length) {
+	public int compare(TkgWeight length) {
 		return greaterThan(length) ? 1 : (equals(length) ? 0 : -1);
 	}
 
-	public boolean equals(tkgWeight length) {
+	public boolean equals(TkgWeight length) {
 		return toGram() == length.toGram();
 	}
 
-	public boolean lessThan(tkgWeight length) {
+	public boolean lessThan(TkgWeight length) {
 		return toGram() < length.toGram();
 	}
 
-	public boolean greaterThan(tkgWeight length) {
+	public boolean greaterThan(TkgWeight length) {
 		return toGram() > length.toGram();
 	}
 }
