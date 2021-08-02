@@ -10,6 +10,7 @@ import java.nio.LongBuffer;
 import java.nio.channels.FileChannel;
 import java.util.Scanner;
 
+// change the formatting of the class.
 public class ReadPrimeNumbers {	
 	public static void main(String[] args) throws IOException {
 		// create object of File to store files
@@ -28,7 +29,8 @@ public class ReadPrimeNumbers {
 		FileChannel inChannel = inputFile.getChannel();
 		// store number of Prime in PRIMECOUNT and start it.
 		Scanner input = new Scanner(System.in);
-		System.out.println("How many prime number you want to enter : ");
+		System.out.println("How many prime number your want between 1 to Your choice.");
+		System.out.println("Enter Your Choice : ");
 		int primeStart = 1;
 		// store data into the buffer at the time 48 byte.
 		ByteBuffer byteBuffer = ByteBuffer.allocate(8 * 1024);

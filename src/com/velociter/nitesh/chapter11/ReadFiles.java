@@ -9,9 +9,9 @@ import java.nio.channels.FileChannel;
 
 public class ReadFiles {
 	public static void main(String[] args) {
-		
+		String filePath = "D:/myFile.txt";
 		// create the object of file to store
-		File txtFile = new File("D:/myFile.txt");
+		File txtFile = new File(filePath);
 		
 		// create the object of FileInputStream to read data from file.
 		FileInputStream inputFile = null;

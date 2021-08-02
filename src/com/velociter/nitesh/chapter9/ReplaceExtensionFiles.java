@@ -31,7 +31,7 @@ public class ReplaceExtensionFiles {
 		
 		// find the last index of file extension.
 		int i = f.lastIndexOf('.');
-		
+		System.out.println("i = "+i);
 		// fetching the last index of substring and store into empty string. 
 		if (i > 0 && i < f.length() - 1) {
 			extension = f.substring(i + 1);
@@ -42,7 +42,7 @@ public class ReplaceExtensionFiles {
 	public static void main(String args[]) throws Exception {
 		
 		// create string to store filename
-		String filename = "D:/myFile.txt";
+		String filename = "D:/myFile.jpeg";
 		
 		// create file class object to store file
 		File txtFile = new File(filename);
