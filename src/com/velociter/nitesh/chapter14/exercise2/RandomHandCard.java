@@ -3,13 +3,14 @@ package com.velociter.nitesh.chapter14.exercise2;
 import java.util.Vector;
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.ListIterator;
 
 public class RandomHandCard {
 	public static void main(String[] args) {
 		String[] suits = { "C", "D", "H", "S" };
 		String[] cardValues = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
-
+		
 		int cardsInDeck = 52;
 		Vector<String> deck = new Vector<String>(cardsInDeck);
 		LinkedList<String> shuffledDeck = new LinkedList<String>();
