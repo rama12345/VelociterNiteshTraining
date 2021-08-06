@@ -15,7 +15,7 @@ class SquareRootPrime {
 
 		// Using for loop for traversing all
 		// the numbers from 1 to N
-//		endNumber = (int)Math.sqrt(endNumber);
+		endNumber = (int)Math.sqrt(endNumber);
 		for (x = startNumber; x <= endNumber; x++) {			
 			// Using flag variable to check
 			// if x is prime or not
@@ -45,12 +45,18 @@ class SquareRootPrime {
 		
 		System.out.println("Enter End Number to Reach the Prime : ");
 		endNumber = input.nextInt();
+		
+		// before completion time in millisecond.
 		long startTime = System.currentTimeMillis();
 		System.out.println("Before Execution in Second : " + startTime);
-//		sq =(int) Math.sqrt(N);
+		
 		prime_Number(startNumber, endNumber);
+		
+		// after completion time in millisecond.
 		long entTime = System.currentTimeMillis();
 		System.out.println("\nAfter Execution in Second : " + entTime);
+		
+		// difference completion time in millisecond.
 		System.out.println("Difference Between Execution Second : " + (entTime - startTime) / 1000F+"seconds");
 	}
 }

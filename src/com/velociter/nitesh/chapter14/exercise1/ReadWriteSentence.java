@@ -20,16 +20,22 @@ public class ReadWriteSentence {
 		System.out.println("How Many Sentence Do You Want to Write.");
 		System.out.print("Enter Your Sentence : ");
 		textOfString = input.nextLine();
+		
+		// before completion time in millisecond.
 		long startTime = System.currentTimeMillis();
 		System.out.println("Before Execution Time in Second : " + startTime);
+		
+		// check if file exist or not.
 		if (file.isFile()) {
 			System.out.println("your file already exists.");
-//			bufferedWriter.write(textOfString);
 			System.out.println("Successfully Write.....");
 		} else {
 			try {
-				FileWriter fileWriter = new FileWriter(fileName);
+				// create an object of file writer to write into file.
+				FileWriter fileWriter = new FileWriter(fileName,true);
+				// store file write to buffer.
 				bufferedWriter = new BufferedWriter(fileWriter);
+				// write data into file.
 				bufferedWriter.write(textOfString);
 				bufferedWriter.close();
 				System.out.println("Successfully Write.....");
@@ -38,14 +44,19 @@ public class ReadWriteSentence {
 			} finally {
 				try {
 					if (bufferedWriter != null) {
+						// close the write operation.
 						bufferedWriter.close();
 					}
 				} catch (IOException e) {
 				}
 			}
 		}
+		
+		// after completion time in millisecond.
 		long endTime = System.currentTimeMillis();
 		System.out.println("\nAfter Execution Time in Second : " + endTime);
+		
+		// difference completion time in millisecond.
 		System.out.println("Difference in Execution Time is : " + (endTime - startTime) / 1000F + "s");
 	}
 }

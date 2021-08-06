@@ -14,11 +14,15 @@ public class PrintNumberWithSqRoot {
 		System.out.print("Enter Ending Number : ");
 		end = scan.nextInt();
 
+		// before completion time in millisecond.
 		System.out.print("Prime Numbers Between " + start + " and " + end + " is :\n");
 		long startTime = System.currentTimeMillis();
 		System.out.println("Before Execution in Second : " + startTime);
+		
+		// iterate with start to end number.
 		for (i = start; i <= end; i++) {
 			count = 0;
+			// check if its square root not prime.
 			for (j = 2; j < Math.sqrt(i); j++) {
 				if (i % j == 0) {
 					count++;
@@ -29,8 +33,12 @@ public class PrintNumberWithSqRoot {
 				System.out.print(i + " ");
 			}
 		}
+		
+		// after completion time in millisecond.
 		long entTime = System.currentTimeMillis();
 		System.out.println("\nAfter Execution in Second : " + entTime);
+		
+		// difference completion time in second.
 		System.out.println("Difference Between Execution in Second : " + (entTime - startTime) / 1000F + "seconds");
 	}
 }
