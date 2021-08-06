@@ -1,52 +1,40 @@
 package com.velociter.nitesh.chapter11;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 public class ReadFiles {
 	public static void main(String[] args) {
-		String filePath = "D:/myFile.txt";
-		// create the object of file to store
-		File txtFile = new File(filePath);
+		String line = null;
 		
-		// create the object of FileInputStream to read data from file.
-		FileInputStream inputFile = null;
+		String fileName = "D:/myFile.txt";
 		
-		// try condition if that possible.
+		// create fileReader to read file.
+		FileReader fileReader = null;
+		// create bufferReader to read file input.
+		BufferedReader bufferedReader;
 		try {
-			inputFile = new FileInputStream(txtFile);
-		} catch (FileNotFoundException exception) {
-			exception.printStackTrace(System.err);
-			System.exit(1);
-		}
-		
-		// fetch and reading data via input file channel.
-		FileChannel inputChannel = inputFile.getChannel();
-		
-		// store data into the buffer at the time 48 byte.
-		ByteBuffer bufferStream = ByteBuffer.allocate(1024);
-		try {
-			// check if data into the file not to empty.
-			while (inputChannel.read(bufferStream) != -1) {
-		
-				// print all the character which it will store.
-				System.out.println("Resulting String : " + ((ByteBuffer) (bufferStream.flip())).asCharBuffer().toString());
-				
-				// Clear the buffer for the next read
-				bufferStream.clear(); 
-			}
-			System.out.println("EOF reached. ");
 			
-			// Close the file and the channel
-			inputFile.close(); 
-		} catch (IOException exception) {
-			exception.printStackTrace(System.err);
-			System.exit(1);
+			// create and object of fileReader to read file input.
+			fileReader = new FileReader(fileName);
+			
+			// create an object of bufferReader to store fileReader input. 
+			bufferedReader=new BufferedReader(fileReader);
+			
+			// check the condition if not the end of file.
+			while((line=bufferedReader.readLine())!=null)
+			{
+				System.out.println(line);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		System.exit(0);
 	}
 }
