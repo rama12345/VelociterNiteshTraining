@@ -21,7 +21,7 @@ class Person implements java.io.Serializable {
 class SeperateFileIndex {
 	public static void main(String[] args) {
 		try {
-			String filename = "file.txt"; // file name
+			String filename = "D:/file.txt"; // file name
 			FileOutputStream file = new FileOutputStream(filename);
 			ObjectOutputStream outputStreamObj = new ObjectOutputStream(file); // creating a file
 
