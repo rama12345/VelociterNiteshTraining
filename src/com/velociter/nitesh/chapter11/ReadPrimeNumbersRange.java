@@ -13,8 +13,9 @@ import java.util.Scanner;
 public class ReadPrimeNumbersRange {
 	public static void main(String[] args) throws IOException {
 
+		String filePath = "D:/primes.txt";
 		// create object of File to store files
-		File txtPrimesFile = new File("D:/primes.txt");
+		File txtPrimesFile = new File(filePath);
 
 		// read file using FileInputStream
 		FileInputStream inputFile = null;
