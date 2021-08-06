@@ -4,51 +4,6 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class PrimeNumbersSquareRoot {
-//	public static void main(String[] args) {
-//
-//		// creating and initialize a data member.
-//		int startNumber, endNumber, i, j, count = 0, number;
-//
-//		// creating an object of vector to store prime number.
-//
-//		// get the value from user start to end number.
-//		Scanner scan = new Scanner(System.in);
-//		float startTime = System.currentTimeMillis() / 1000;
-//		System.out.println("Before Execution in Second : " + startTime);
-//		System.out.print("Enter the Range of Number Between Start and End Of Prime.");
-//		System.out.print("\nEnter Starting Number : ");
-//		startNumber = scan.nextInt();
-//		System.out.print("Enter Ending Number : ");
-//		endNumber = scan.nextInt();
-//
-//		// printing prime number between start and end.
-//		System.out.print("Prime Numbers Between " + startNumber + " and " + endNumber + " is :\n");
-//		// check the condition between start to end.
-//		// check the condition between start to end.
-//		for (i = startNumber; i <= endNumber; i++) {
-//			count = 0;
-//			
-//			// fetch the condition of prime number. 
-//			for (j = 2; j < Math.sqrt(i); j++) {
-//			
-//				// check if equal and divisible it.
-//				if (i % j == 0) {
-//					count++;
-//					break;
-//				}
-//			}
-//			// check the count if zero.
-//			if (count == 0) {
-//				// add prime to vector.
-//				System.out.print(i+" ");
-//			}
-//		}
-//		float entTime = System.currentTimeMillis() / 1000;
-//		System.out.println("\nAfter Execution in Second : " + entTime);
-//		System.out.println("Difference Between Execution in Second : " + (entTime - startTime));
-//	}
-//}
-
 	public static void main(String[] args) {
 
 		int startNumber, endNumber,number,i;
