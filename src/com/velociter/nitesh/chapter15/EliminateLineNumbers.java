@@ -5,21 +5,25 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class EliminateLineNumbers {
 	public static void main(String args[]) {
-		String textOfString = "1. My dog hasn’t got any nose.\n" + "2. How does your dog smell then?\n"
-							+ "3. My dog smells horrible.\n" + "4. How does your dog smell then?\n" + "5. My dog smells horrible.\n"
-							+ "6. How does your dog smell then?\n" + "7. My dog smells horrible.\n"
-							+ "8. How does your dog smell then?\n" + "9. My dog smells horrible.\n"
-							+ "10. How does your dog smell then?\n" + "11. My dog smells horrible.\n"
-							+ "12. How does your dog smell then?\n" + "13. My dog smells horrible.\n"
-							+ "14. How does your dog smell then?\n" + "15. My dog smells horrible.\n"
-							+ "16. How does your dog smell then?\n" + "17. My dog smells horrible.\n";
-		String lineOfString = null;
+//		String textOfString = "1. My dog hasn’t got any nose.\n" + "2. How does your dog smell then?\n"
+//							+ "3. My dog smells horrible.\n" + "4. How does your dog smell then?\n" + "5. My dog smells horrible.\n"
+//							+ "6. How does your dog smell then?\n" + "7. My dog smells horrible.\n"
+//							+ "8. How does your dog smell then?\n" + "9. My dog smells horrible.\n"
+//							+ "10. How does your dog smell then?\n" + "11. My dog smells horrible.\n"
+//							+ "12. How does your dog smell then?\n" + "13. My dog smells horrible.\n"
+//							+ "14. How does your dog smell then?\n" + "15. My dog smells horrible.\n"
+//							+ "16. How does your dog smell then?\n" + "17. My dog smells horrible.\n";
+		String textOfString,lineOfString = null;
 		String fileName = "D:/regulerEx1.txt";
 		BufferedWriter bufferWriter = null;
 		BufferedReader bufferReader = null;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the Sentence : ");
+		textOfString = input.nextLine();
 		try {
 			// create the Object of FileWriter to write the data into file.
 			FileWriter fileWriter = new FileWriter(fileName);

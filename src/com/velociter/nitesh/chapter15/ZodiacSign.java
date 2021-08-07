@@ -9,13 +9,17 @@ public class ZodiacSign {
 
 		// get the month and day from user.
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter your birth month(1-12) : \n");
-		month = input.nextInt();
-		System.out.println("Enter your birth day : \n");
-		day = input.nextInt();
+		System.out.println("Enter your birth month(1-12) : ");
+		if(input.hasNext("[0-9]*")) {
+			month = input.nextInt();
+			System.out.println("Enter your birth day : ");
+			day = input.nextInt();
 
-		// call the function to find the Zodiac Sign pass month and day from user.
-		zodiac_sign(month, day);
+			// call the function to find the Zodiac Sign pass month and day from user.
+			zodiac_sign(month, day);
+		}else {
+			System.out.println("Please Enter Valid Number.");
+		}
 	}
 
 	// method for check Zodiac Sign for Given Date of Birth

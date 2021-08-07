@@ -5,17 +5,22 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RemoveSpaces {
 	public static void main(String args[]) {
-		String textOfString = "My dog hasn’t got any nose.\n" + "How does your dog smell then?\n"
-								+ "My dog smells horrible.\n";
-		String lineOfString = null, regEx = " ";
+//		String textOfString = "My dog hasn’t got any nose.\n" + "How does your dog smell then?\n"
+//								+ "My dog smells horrible.\n";
+		
+		String textOfString,lineOfString = null, regEx = " ";
 		String fileName = "D:/regulerEx.txt";
 		BufferedWriter bufferWriter = null;
 		BufferedReader bufferReader = null;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the Sentence : ");
+		textOfString = input.nextLine();
 		try {
 			// create the Object of FileWriter to write the data into file.
 			FileWriter fileWriter = new FileWriter(fileName);

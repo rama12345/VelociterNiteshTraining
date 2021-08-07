@@ -8,10 +8,10 @@ import java.util.Scanner;
 public class TryPhoneBook {
 	static String filePath = "D:/Addresses.txt";
 	private static Scanner in = new Scanner(System.in);
-	
+
 	// create an object of file to store all details of person to file.
 	private static File file = new File(filePath);
-	
+
 	// create list of person to extract list of person details.
 	static List<Person> people = new ArrayList<>();
 

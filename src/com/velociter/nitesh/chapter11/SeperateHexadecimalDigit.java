@@ -8,7 +8,7 @@ public class SeperateHexadecimalDigit {
 	public static void main(String[] args) throws Exception {
 		String lineOfString = null, wordsOfString = "", newWords;
 		char characterOfString, charactersOfArray[] = new char[50];
-		int i, lengthOfString, j;
+		int i, lengthOfString, j, wc = 0;
 		String fileName = "D:/test.txt";
 
 		// create an Object of StringBuffer to store hexadecimal number.
@@ -32,13 +32,12 @@ public class SeperateHexadecimalDigit {
 				if (characterOfString != ' ') {
 					wordsOfString += characterOfString;
 				} else {
-					newWords = " " + wordsOfString;
-
+					newWords = "" + wordsOfString;
 					// check the length of words equals to 8.
 					if (newWords.length() == 8) {
 
 						// print the word of length 8
-						System.out.println(newWords);
+						System.out.println("Word Of String is : " + newWords);
 
 						// Converting string to character array
 						charactersOfArray = newWords.toCharArray();
@@ -54,7 +53,7 @@ public class SeperateHexadecimalDigit {
 						}
 						// convert hexadecimal number to resulting string.
 						String resultingString = stringBuffer.toString();
-						System.out.println(resultingString);
+						System.out.println("Hexadecimal Number is : " + resultingString);
 					}
 					// set the word to empty at the end.
 					wordsOfString = "";

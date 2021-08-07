@@ -5,26 +5,35 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Scanner;
 
 public class SequentialLineNumber {
 	public static void main(String args[]) {
-		String textOfString = "My dog hasn’t got any nose.\n" + "How does your dog smell then?\n"
-				+ "My dog smells horrible.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n"
-				+ "How does your dog smell then?\n" + "My dog smells horrible.\n" + "How does your dog smell then?\n"
-				+ "My dog smells horrible.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n"
-				+ "How does your dog smell then?\n" + "My dog smells horrible.\n" + "How does your dog smell then?\n"
-				+ "My dog smells horrible.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n";
-		String lineOfString = null;
+//		String textOfString = "My dog hasn’t got any nose.\n" + "How does your dog smell then?\n"
+//				+ "My dog smells horrible.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n"
+//				+ "How does your dog smell then?\n" + "My dog smells horrible.\n" + "How does your dog smell then?\n"
+//				+ "My dog smells horrible.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n"
+//				+ "How does your dog smell then?\n" + "My dog smells horrible.\n" + "How does your dog smell then?\n"
+//				+ "My dog smells horrible.\n" + "How does your dog smell then?\n" + "My dog smells horrible.\n";
+		String textOfString, lineOfString = null;
 		int count = 000;
 		String fileName = "D:/regulerEx1.txt";
 		BufferedWriter bufferWriter = null;
 		BufferedReader bufferReader = null;
+	
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the Sentence : ");
+		textOfString = input.nextLine();
 		try {
 			// create the Object of FileWriter to write the data into file.
-			FileWriter fileWriter = new FileWriter(fileName);
-
+			FileWriter fileWriter = new FileWriter(fileName,true);
+			
 			// create the Object of BufferedWriter store writer file.
 			bufferWriter = new BufferedWriter(fileWriter);
+			
 			fileWriter.write(textOfString);
 			System.out.println("Successfully Write to File.......\n");
 
@@ -42,7 +51,7 @@ public class SequentialLineNumber {
 			while ((lineOfString = bufferReader.readLine()) != null) {
 				count++;
 				// print data from file line by line.
-				System.out.println("00" + count + " " + lineOfString);
+				System.out.println("000" + count + ". " + lineOfString);
 			}
 			// close the reading operation.
 			bufferReader.close();
